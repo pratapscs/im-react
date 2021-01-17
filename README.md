@@ -1,6 +1,6 @@
 ## Install
 ```
-npm install im_react_service
+npm install im-react
 ```
 
 ## React Component libraries
