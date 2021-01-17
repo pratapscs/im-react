@@ -1,10 +1,13 @@
 {
-  "name": "im-react-build-template",
+  "name": "im-react-service",
   "version": "1.0.0",
   "main": "./lib/index.js",
-  "private": true,
   "engines": {
     "node": ">=4.0.0"
+  },
+  "author": {
+    "name": "pratap ghowra",
+    "email": "pratap@zkteco.in"
   },
   "files": [
     "lib"
@@ -73,6 +76,7 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
+  "homepage": "http://pratapscs.github.io/im-react/",
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
@@ -81,8 +85,13 @@
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "npm run build:commonjs && npm run build:css",
     "predeploy:docs": "npm run build:docs",
-    "deploy:docs": "gh-pages -d build"
+    "deploy:docs": "gh-pages -d build",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "prepublish": "npm run build:lib"
   },
   "jest": {
     "collectCoverageFrom": [
