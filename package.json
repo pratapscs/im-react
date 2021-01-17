@@ -1,14 +1,11 @@
 {
-  "name": "im-react-service",
+  "name": "im_react_service",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=4.0.0"
   },
-  "author": {
-    "name": "pratap ghowra",
-    "email": "pratap@zkteco.in"
-  },
+  "author": "pratap ghowra <gpratap131992@gmail.com>",
   "files": [
     "lib"
   ],
@@ -131,5 +128,17 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "description": "``` npm install im-react ```",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratapscs/im-react.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pratapscs/im-react/issues"
   }
 }
