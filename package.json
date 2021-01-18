@@ -1,5 +1,5 @@
 {
-  "name": "im_react_service",
+  "name": "im-react",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "engines": {
