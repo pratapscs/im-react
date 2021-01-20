@@ -1,6 +1,6 @@
 {
-  "name": "im-react",
-  "version": "1.0.0",
+  "name": "im_react_service",
+  "version": "1.0.1",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=4.0.0"
@@ -16,6 +16,7 @@
     "toolkit"
   ],
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "styled-components": "1.4.5"
@@ -58,7 +59,7 @@
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
     "promise": "7.1.1",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.1",
     "react-addons-test-utils": "15.5.1",
     "react-dev-utils": "^2.0.1",
     "react-docgen": "2.14.0",

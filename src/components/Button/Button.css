@@ -1,0 +1,45 @@
+
+.mg-button {
+    background-color: #36c96d;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-family: BrownStd, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    padding: 10px 30px;
+}
+
+.mg-button:hover {
+  background-color: #fff;
+  border-color: #36c96d;
+  color: #36c96d;
+}
+
+.mg-button[disabled],
+.mg-button[disabled]:hover {
+    background-color: #eee;
+    border-color: #fff;
+    color: #787878;
+    cursor: default;
+}
+
+
+.mg-button.orange,
+.mg-button.waitlist {
+    background-color: #36c96d;
+}
+
+.mg-button.orange:hover,
+.mg-button.waitlist:hover {
+    background-color: #36c96d;
+    border-color: #fff;
+    color: #fff;
+}
+
+.mg-button.block {
+    width: 15%;
+}

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea renders the component correctly 1`] = `
+<div
+  className="mg-textarea"
+>
+  <label
+    htmlFor="test"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    Test
+     
+  </label>
+  <textarea
+    id="test"
+    name="Test"
+    onChange={[Function]}
+    placeholder={undefined}
+    style={
+      Object {
+        "borderColor": "#ccc",
+        "height": undefined,
+        "resize": "none",
+        "width": undefined,
+      }
+    }
+    value={undefined}
+  />
+</div>
+`;
