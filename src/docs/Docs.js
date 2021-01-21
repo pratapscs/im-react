@@ -23,7 +23,7 @@ export default class Docs extends React.Component {
 
     return (
       <div>
-        <h3><a href="https://github.com/pratapscs/im-react">IM Service Components</a></h3>
+        <h3><a className="title" href="https://github.com/pratapscs/im-react">IM Service Components</a></h3>
         <Navigation components={componentData.map(component => component.name)} />
         <ComponentPage component={component} />
       </div>
