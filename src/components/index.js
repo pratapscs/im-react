@@ -13,3 +13,4 @@ export { default as Textarea } from './Textarea';
 export { default as Tooltip } from './Tooltip';
 export { default as Grid } from './Grid';
 export { default as Card } from './Card';
+export { default as IMDrawer } from './IMDrawer';

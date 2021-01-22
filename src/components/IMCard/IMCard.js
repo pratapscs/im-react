@@ -11,7 +11,7 @@ export const styles = {
   },
 };
 
-const Card = React.forwardRef(function Card(props, ref) {
+const IMCard = React.forwardRef(function Card(props, ref) {
   const { classes, className, raised = false, ...other } = props;
 
   return (
@@ -24,7 +24,7 @@ const Card = React.forwardRef(function Card(props, ref) {
   );
 });
 
-Card.propTypes = {
+IMCard.propTypes = {
   // ----------------------------- Warning --------------------------------
   // | These PropTypes are generated from the TypeScript type definitions |
   // |     To update them edit the d.ts file and run "yarn proptypes"     |
@@ -48,6 +48,6 @@ Card.propTypes = {
   raised: PropTypes.bool,
 };
 
-const StyledCard = withStyles(styles, { name: 'MuiGrid' })(Card);
+const StyledCard = withStyles(styles, { name: 'MuiGrid' })(IMCard);
 
-export default Card;
+export default IMCard;

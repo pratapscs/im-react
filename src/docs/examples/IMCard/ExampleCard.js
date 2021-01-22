@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {Card, CardContent, CardMedia, IconButton, Typography} from '@material-ui/core';
-import {AcUnitIcon} from '@material-ui/icons';
+import IMCard from 'im-react/IMCard';
+import {CardContent, CardMedia, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -35,7 +35,7 @@ export default function MediaControlCard() {
  
 
   return (
-    <Card className={classes.card}>
+    <IMCard className={classes.card}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography component="h5" variant="h5">
@@ -51,6 +51,6 @@ export default function MediaControlCard() {
         image="https://material-ui.com/static/images/cards/live-from-space.jpg"
         title="Live from space album cover"
       />
-    </Card>
+    </IMCard>
   );
 }
