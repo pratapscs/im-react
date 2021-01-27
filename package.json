@@ -68,7 +68,7 @@
     "prop-types": "^15.7.2",
     "react-addons-test-utils": "15.5.1",
     "react-dev-utils": "^2.0.1",
-    "react-docgen": "2.14.0",
+    "react-docgen": "2.21.0",
     "react-error-overlay": "^1.0.6",
     "react-test-renderer": "^15.5.4",
     "rimraf": "2.6.1",

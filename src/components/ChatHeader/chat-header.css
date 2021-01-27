@@ -1,0 +1,5 @@
+.im-chat-header {
+    position: fixed;
+    top:auto;
+    display: flex;
+}

@@ -13,3 +13,6 @@ export { default as Textarea } from './Textarea';
 export { default as Tooltip } from './Tooltip';
 export { default as Grid } from './Grid';
 export { default as IMDrawer } from './IMDrawer';
+export { default as IMListItem } from './IMListItem';
+export { default as IMList } from './IMList';
+export { default as IMCard } from './IMCard';

@@ -1,0 +1,6 @@
+.im-chat-body {
+overflow: hidden;
+overflow-y: scroll;
+display: flex;
+position: fixed;
+}

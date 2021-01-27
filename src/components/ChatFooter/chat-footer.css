@@ -1,0 +1,6 @@
+.im-chat-footer {
+    position:fixed;
+    bottom:auto;
+    display: flex;
+    /* min-width: 100%; */
+}

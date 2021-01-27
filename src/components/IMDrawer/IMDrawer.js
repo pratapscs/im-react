@@ -258,6 +258,6 @@ IMDrawer.propTypes = {
   variant: PropTypes.oneOf(['permanent', 'persistent', 'temporary']),
 };
 
-const StyledGrid = withStyles(styles, { name: 'MuiDrawer', flip: false })(IMDrawer);
+const StyledDrawer = withStyles(styles, { name: 'MuiDrawer', flip: false })(IMDrawer);
 
 export default IMDrawer;
