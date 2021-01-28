@@ -4,7 +4,7 @@ import {Grid} from '@material-ui/core';
 import IMIcon from '../IMIcon/IMIcon';
 import IMButton from '../IMButton/IMButton';
 import './invitation-card.css';
-import InviteMedia from '../../assets/images/invite.png';
+//import InviteMedia from './invite.png';
 
 
 function InvitationCard({ img, titleColor, subTitleColor, title, subTitle, Button, bgColor, width, height, position, margin, ...props }) {
@@ -14,6 +14,8 @@ function InvitationCard({ img, titleColor, subTitleColor, title, subTitle, Butto
 
     const onClose = () => {
     };
+
+    const InviteMedia = require('./invite.png');
 
     return (
         <Fragment>
