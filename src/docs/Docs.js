@@ -20,7 +20,7 @@ export default class Docs extends React.Component {
   render() {
     const {route} = this.state;
     const component = route ? componentData.filter( component => component.name === route)[0] : componentData[0];
-    alert(component);
+    //alert(component);
     return (
       <div>
         <h3><a className="title" href="https://github.com/pratapscs/im-react">IM Service Components</a></h3>

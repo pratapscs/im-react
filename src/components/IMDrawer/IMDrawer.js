@@ -259,5 +259,6 @@ IMDrawer.propTypes = {
 };
 
 const StyledDrawer = withStyles(styles, { name: 'MuiDrawer', flip: false })(IMDrawer);
+console.log(JSON.stringify(StyledDrawer));
 
 export default IMDrawer;

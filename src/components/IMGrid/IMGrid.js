@@ -340,4 +340,6 @@ IMGrid.propTypes = {
 
 const StyledGrid = withStyles(styles, { name: 'MuiGrid' })(IMGrid);
 
+console.log(JSON.stringify(StyledGrid));
+
 export default IMGrid;

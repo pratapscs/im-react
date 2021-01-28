@@ -28,5 +28,6 @@ IMCard.propTypes = {
 const Card = React.forwardRef(function Card(props, ref) {
     return <Card innerRef={ref} {...props}/>;
 });
+console.log(Card);
 
 export default IMCard;

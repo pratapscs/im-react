@@ -101,5 +101,6 @@ IMList.propTypes = {
 
 const StyledIMList = withStyles(styles, { name: 'MuiList', flip: false})(IMList);
 
-alert(JSON.stringify(StyledIMList));
+console.log(JSON.stringify(StyledIMList));
+
 export default IMList;

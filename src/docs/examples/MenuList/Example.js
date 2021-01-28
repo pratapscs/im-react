@@ -4,6 +4,7 @@ import MenuList from 'im-react/MenuList';
 export default function MenuListExample() {
     const leftSideBarMenuListClicked = (event) => {
         const id = event.target.value;
+        console.log(id);
         alert("Clicked!")
     };
     return (
