@@ -8,7 +8,6 @@ function IMIcon({ size, color, icon, className, style, viewBox }) {
   return (
     <svg
       className={className}
-
       viewBox={viewBox}
       width={`${size}px`}
       height={`${size}px`}
@@ -23,14 +22,14 @@ function IMIcon({ size, color, icon, className, style, viewBox }) {
 };
 
 IMIcon.defaultProps = {
-  size: 35,
+  size: "35",
   color: "#7c8d9d",
   viewBox: "0 0 24 24",
   className: "",
 };
 
 IMIcon.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string,
   color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   viewBox: PropTypes.string.isRequired,
