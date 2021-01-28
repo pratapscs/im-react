@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 
 const ToolBar = ({bgColor, color, width, height, margin, padding, position, top, left, ...props}) => {
     return (
-        <div 
-            style={{
-                background:bgColor, 
-                color:color, 
-                width:width, 
-                height:height, 
-                margin:margin, 
-                padding:padding,
-                position:position,
-                top:top,
-                left:left
-            }}>
-            {props.children}                
-        </div>
+            <div style={{
+                    background:bgColor, 
+                    color:color, 
+                    width:width, 
+                    height:height, 
+                    margin:margin, 
+                    padding:padding,
+                    position:position,
+                    top:top,
+                    left:left
+                    }}>
+                {props.children}                
+            </div>
     );
 }
 
@@ -39,9 +38,8 @@ ToolBar.defaultProps = {
     height: '100vh',
     margin: '0',
     padding: '0',
-    position: 'absolute',
-    top: '0',
-    left: '0'
+    position: 'fixed',
+    top: '0'
 };
 
 export default ToolBar;

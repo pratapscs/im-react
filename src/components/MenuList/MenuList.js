@@ -5,11 +5,27 @@ import {ListItem} from '@material-ui/core';
 import {ListItemText} from '@material-ui/core';
 import {ListItemAvatar} from '@material-ui/core';
 import IMAvatar from '../IMAvatar/IMAvatar';
+import './menu-list.css'
 
-const MenuList = ({id, width, height, bgColor, color, title, titleColor, desc, descColor, time, timeColor, textAlign, margin, padding, onClick, ...props}) => {
+const MenuList = ({
+    id, 
+    width, 
+    height, 
+    bgColor, 
+    color, 
+    title, 
+    titleColor, 
+    desc, 
+    descColor, 
+    time, 
+    timeColor, 
+    textAlign, 
+    margin, 
+    padding, 
+    onClick, ...props}) => {
     return (
         <Fragment>
-            <List component="nav" aria-label="main mailbox folders">
+            <List className="im-menu-list" component="nav" aria-label="main mailbox folders">
                 <ListItem onClick={onClick} style={{background:bgColor, color:color, width:width, height:height}}>
                     <ListItemAvatar>
                         <IMAvatar variant="circular" />
@@ -51,8 +67,6 @@ MenuList.defaultProps = {
     time: '15:35',
     textAlign: 'right',
     timeColor: '#bfccd7',
-    width: '#bfccd7',
-    height: '#bfccd7'
 };
 
 export default MenuList;

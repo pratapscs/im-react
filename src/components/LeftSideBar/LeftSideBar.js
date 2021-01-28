@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import './left-sidebar.css'
 
 const LeftSideBar = ({
     bgColor, 
@@ -7,28 +8,22 @@ const LeftSideBar = ({
     width, 
     height, 
     border,
-    margin, 
-    marginLeft, 
-    marginRight, 
-    padding,
-    paddingLeft, 
-    paddingRight,
+    margin,  
+    padding, 
     position, 
     top, 
     left, ...props}) => {
     return (
         <Fragment>
-            <div style={{
+            <div 
+                className="im-left-sidebar" 
+                style={{
                     background:bgColor, 
                     color:color, 
                     width:width, 
                     height:height, 
                     margin:margin,
-                    marginLeft:marginLeft, 
-                    marginRight:marginRight, 
                     padding:padding,
-                    paddingLeft:paddingLeft, 
-                    paddingRight:paddingRight,
                     position:position,
                     top:top,
                     left:left
@@ -46,11 +41,7 @@ LeftSideBar.propTypes = {
     height: PropTypes.string,
     border: PropTypes.string,
     margin: PropTypes.string,
-    marginLeft: PropTypes.string,
-    marginRight: PropTypes.string,
     padding: PropTypes.string,
-    paddingLeft: PropTypes.string,
-    paddingRight: PropTypes.string,
     position: PropTypes.string,
     top: PropTypes.string,
     left: PropTypes.string
@@ -59,12 +50,16 @@ LeftSideBar.propTypes = {
 LeftSideBar.defaultProps = {
     bgColor: '#fff',
     color: '#000000',
-    width: 'auto',
+    width: '325px',
     height: '100vh',
-    // marginLeft: '75px',
+    margin: '0 0 0 75px',
     border: '1px solid #ddd',
-    position: 'staic',
-    top: '0'
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    title: 'ZKTeco + Team', 
+    desc: 'Membership Application', 
+    time: '16:00'
 };
 
 export default LeftSideBar;

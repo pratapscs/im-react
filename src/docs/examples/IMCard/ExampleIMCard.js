@@ -27,7 +27,22 @@ export default function SimpleCard() {
 
   return (
     <IMCard className={classes.root}>
-     
+      <IMCardContent>
+        <IMTypography className={classes.title} >
+          Word of the Day
+        </IMTypography>
+        <IMTypography variant="h5" component="h2">
+          be{bull}nev{bull}o{bull}lent
+        </IMTypography>
+        <IMTypography className={classes.pos} color="textSecondary">
+          adjective
+        </IMTypography>
+        <IMTypography variant="body2" component="p">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </IMTypography>
+      </IMCardContent>
     </IMCard>
   );
 }

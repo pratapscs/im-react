@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {Paper ,withStyles} from '@material-ui/core';
+import {Paper} from '@material-ui/core';
 
 export const styles = {
   /* Styles applied to the root element. */
