@@ -13,7 +13,7 @@ function GridContainer({bgColor, direction, justify, alignItems, padding, margin
         </Fragment>
     )
 }
-GridContainer.prototypes = {
+GridContainer.propTypes = {
     bgColor: PropTypes.string,
     direction: PropTypes.string,
     justify: PropTypes.string,
@@ -21,6 +21,7 @@ GridContainer.prototypes = {
     padding: PropTypes.string,
     margin: PropTypes.string,
 };
+
 GridContainer.defaultProps = {
     bgColor: '',
     direction: 'row',

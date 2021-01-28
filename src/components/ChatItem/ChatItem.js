@@ -46,12 +46,12 @@ const ChatItem = ({
 };
 
 ChatItem.defaultProps = {
-    bgColor: "#F0F8FF",
-    height: "75px",
     avatar: <Avatar>V</Avatar>,
     message: "hi Vinay, welcome to zkteco",
+    bgColor: "#F0F8FF",
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontWeight: "small",
+    fontSize: "15px",
     float: "left",
     color: "#000"
 };

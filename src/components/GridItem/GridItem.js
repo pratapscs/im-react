@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {Grid} from '@material-ui/core';
 
-
 function GridItem({bgColor, xs, sm, md, lg, padding, ...props}) {
     return (
         <Fragment>
@@ -12,7 +11,7 @@ function GridItem({bgColor, xs, sm, md, lg, padding, ...props}) {
         </Fragment>
     )
 }
-GridItem.prototypes = {
+GridItem.propTypes = {
     bgColor: PropTypes.string,
     xs: PropTypes.number,
     sm: PropTypes.number,
@@ -20,6 +19,7 @@ GridItem.prototypes = {
     lg: PropTypes.number,
     padding: PropTypes.string,
 };
+
 GridItem.defaultProps = {
     bgColor: '#FFF',
     xs: 12,
