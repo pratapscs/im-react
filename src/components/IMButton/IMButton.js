@@ -32,14 +32,14 @@ IMButton.propTypes = {
     variant: PropTypes.string,
     color: PropTypes.string,
     bgColor: PropTypes.string,
-    size: PropTypes.number,
+    size: PropTypes.string,
     disabled: PropTypes.bool,
     text: PropTypes.string,
     href: PropTypes.string,
     fullWidth: PropTypes.bool,
     className: PropTypes.string,
     onClick: PropTypes.func,
-    textTransform: PropTypes.func
+    textTransform: PropTypes.string
 };
 
 IMButton.defaultProps = {

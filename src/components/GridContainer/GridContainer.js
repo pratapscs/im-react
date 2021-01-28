@@ -25,8 +25,8 @@ GridContainer.propTypes = {
 GridContainer.defaultProps = {
     bgColor: '',
     direction: 'row',
-    padding: 0,
-    margin: 0,
+    padding: '0px',
+    margin: '0px',
 
 }
 export default GridContainer;
