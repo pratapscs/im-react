@@ -2,7 +2,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 //import List from '@material-ui/core/List';
 import IMList from "im-react/IMList";
-import {ListItem, ListItemText, ListItemAvatar } from "@material-ui/core";
+import IMListItem from "im-react/IMListItem";
+import IMListItemAvatar from "im-react/IMListItemAvatar";
+import IMListItemText from "im-react/IMListItemText";
+//import {ListItem, ListItemText, ListItemAvatar } from "@material-ui/core";
 import IMAvatar from "im-react/IMAvatar";
 
 const listWidth = 100;
@@ -34,19 +37,19 @@ export default function FolderList() {
       paper: classes.drawerPaper
     }}
     anchor="left">
-      <ListItem>
-        <ListItemAvatar>
+      <IMListItem ContainerComponent='li'>
+        <IMListItemAvatar>
         <IMAvatar/>
-        </ListItemAvatar>
-        <ListItemText primary="Vinay" secondary="Jan 22, 2021" />
-      </ListItem>
-      <ListItem>
-        <ListItemAvatar>
+        </IMListItemAvatar>
+        <IMListItemText primary="Vinay" secondary="Jan 22, 2021" />
+      </IMListItem>
+      <IMListItem ContainerComponent='li'>
+        <IMListItemAvatar>
         <IMAvatar/>
-        </ListItemAvatar>
-        <ListItemText primary="Harshitha" secondary="Jan 21, 2021" />
-      </ListItem>
-      <ListItem>
+        </IMListItemAvatar>
+        <IMListItemText primary="Harshitha" secondary="Jan 21, 2021" />
+      </IMListItem>
+      {/* <ListItem>
         <ListItemAvatar>
         <IMAvatar/>
         </ListItemAvatar>
@@ -69,7 +72,7 @@ export default function FolderList() {
         <IMAvatar/>
         </ListItemAvatar>
         <ListItemText primary="Nani" secondary="Jan 20, 2021" />
-      </ListItem>
+      </ListItem> */}
     </IMList>
   );
 }

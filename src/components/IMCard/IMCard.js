@@ -1,33 +1,61 @@
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import {Paper ,withStyles} from '@material-ui/core';
 
-class IMCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-       
-        }
-    }
-
-    render() {
-        return (
-            <div ref={this.props.innerRef}>
-                Div has ref
-            </div>
-        )
-    }
-}
-
-IMCard.propTypes = {
-    children: PropTypes.node,
-    classes: PropTypes.object,
-    className: PropTypes.string,
-    raised: PropTypes.bool,
+export const styles = {
+  /* Styles applied to the root element. */
+  root: {
+    overflow: 'hidden',
+  },
 };
 
-const Card = React.forwardRef(function Card(props, ref) {
-    return <Card innerRef={ref} {...props}/>;
+const IMCard = React.forwardRef(function Card(props, ref) {
+  const { classes, className, raised = false, ...other } = props;
+
+  return (
+    <Paper
+      className={clsx(styles, className)}
+      elevation={raised ? 8 : 1}
+      ref={ref}
+      {...other}
+    />
+  );
 });
-console.log(Card);
+
+IMCard.propTypes = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * The content of the component.
+   */
+  children: PropTypes.node,
+  /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */
+  classes: PropTypes.object,
+  /**
+   * @ignore
+   */
+  className: PropTypes.string,
+  /**
+   * If `true`, the card will use raised styling.
+   */
+  raised: PropTypes.bool,
+};
+
+IMCard.defaultProps = {
+ 
+  children: PropTypes.node,
+
+  classes: PropTypes.object,
+  
+  className: PropTypes.string,
+
+  raised: PropTypes.bool,
+};
 
 export default IMCard;
