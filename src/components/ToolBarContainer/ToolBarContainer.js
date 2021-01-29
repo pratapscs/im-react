@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import IMProfileAvatar from "../IMProfileAvatar";
 import IMMenuList from "../IMMenuList";
-import ToolBar from "im-react/ToolBar";
+import ToolBar from "../ToolBar";
 import { connect } from "react-redux";
 import { compose } from 'redux';
 
