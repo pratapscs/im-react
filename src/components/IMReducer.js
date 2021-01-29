@@ -1,3 +1,4 @@
+import React from 'react';
 import TextsmsIcon from '@material-ui/icons/Textsms';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
  
@@ -19,5 +20,6 @@ const initialState = {
 }
  
 export default function (state = initialState,action){
+    alert("hi reducer");
     return initialState;
 }
