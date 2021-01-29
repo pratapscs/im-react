@@ -16,8 +16,8 @@ ChatFooter.propTypes = {
     height: PropTypes.string,   
     margin: PropTypes.string,
     padding: PropTypes.string,
-}
 
+}
 ChatFooter.defaultProps = {
     bgColor: '#FFFFFF',
     color:'#707070',

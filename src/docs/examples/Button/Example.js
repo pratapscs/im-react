@@ -51,30 +51,6 @@ function Example() {
             </Button>
             <br />
             <br />
-
-            <Button
-                htmlId="disabled-button"
-                name="disabled-button"
-                onClick={() => showMessage()}
-                disabled="true"
-            >
-                Disabled Button
-            </Button>
-            <br />
-            <br />
-
-            <Button
-                htmlId="disabled-button"
-                name="disabled-button"
-                onClick={() => showMessage()}
-                disabled="true"
-                classname="block"
-            >
-                Disabled Block Level Button
-            </Button>
-            <br />
-            <br />
-
             <Button
                 htmlId="waitlist-button"
                 name="waitlist-button"

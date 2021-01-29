@@ -16,8 +16,6 @@ function InvitationCard({bgColor, color, titleColor, subTitleColor, title, subTi
     const onClose = () => {
     };
 
-    const InviteMedia = require('./invite.png');
-
     return (
         <Fragment>
             <div 
@@ -32,14 +30,14 @@ function InvitationCard({bgColor, color, titleColor, subTitleColor, title, subTi
                 }}>
                 {props.children}
                 <GridContainer>
-                    <GridItem lg="2">
+                    <GridItem lg="auto">
                         <img src={InviteMedia} alt="Invite Member" />
                     </GridItem>
-                    <GridItem lg="7">
+                    <GridItem lg="auto">
                         <p className="im-title" style={{color:titleColor}}><b>{title}</b></p>
                         <p className="im-sub-title" style={{color:subTitleColor}}>{subTitle}</p>
                     </GridItem>
-                    <GridItem lg="3" textAlign="center">
+                    <GridItem lg="auto" textAlign="center">
                         <IMIcon icon="CloseIcon" size="25" onClose={() => onClose()} />
                         <IMButton background="#36c96d" size="small" onClick={() => onClick()}>Invite</IMButton>
                     </GridItem>

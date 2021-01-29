@@ -36,6 +36,7 @@ const Button = ({
 };
 
 Button.defaultProps = {
+    htmlId: '',
     type: 'submit',
     children: 'Submit',
     size: '',

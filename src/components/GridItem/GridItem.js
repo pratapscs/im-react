@@ -44,10 +44,10 @@ GridItem.prototypes = {
 
 GridItem.defaultProps = {
     bgColor: 'none',
-    xs: '12',
-    sm: '12',
-    md: '12',
-    lg: '12',
+    xs: 'auto',
+    sm: 'auto',
+    md: 'auto',
+    lg: 'auto',
     padding: '0',
     margin: '0',
 };

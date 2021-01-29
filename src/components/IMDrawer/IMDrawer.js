@@ -258,7 +258,7 @@ IMDrawer.propTypes = {
   variant: PropTypes.oneOf(['permanent', 'persistent', 'temporary']),
 };
 
-const StyledDrawer = withStyles(styles, { name: 'MuiDrawer', flip: false })(IMDrawer);
-console.log(JSON.stringify(StyledDrawer));
+const StyledGrid = withStyles(styles, { name: 'MuiDrawer', flip: false })(IMDrawer);
+console.log(StyledGrid);
 
 export default IMDrawer;

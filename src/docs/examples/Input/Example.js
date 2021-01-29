@@ -12,8 +12,8 @@ function Example() {
     return (
         <div>
             <Input
-                htmlId="default-Input"
-                name="default-Input"
+                htmlId="default-Input1"
+                name="default-Input1"
                 label="Input Field"
                 onChange={e => showMessage(e)}
                 placeholder="Some placeholder text" 
@@ -28,22 +28,13 @@ function Example() {
                 placeholder="Corporate Name"
                 width={'60%'}
             />
-            <br />
-            <br />
-
-            <Input
-                htmlId="name-Input"
-                name="name-Input"
-                onChange={e => showMessage(e)}
-                placeholder="Corporate Name"
-                width={'60%'}
-            />
+            
             <br />
             <br />
             
             <Input
-                htmlId="default-Input"
-                name="default-Input"
+                htmlId="default-Input2"
+                name="default-Input2"
                 onChange={e => showMessage(e)}
                 placeholder="Search"
             />

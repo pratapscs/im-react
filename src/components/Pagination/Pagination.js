@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import './Pagination.css';
 
 class Pagination extends React.Component {
@@ -129,7 +130,7 @@ class Pagination extends React.Component {
                     <a onClick={() => this.setPage(pager.totalPages)}>Last</a>
                 </li>
                
-                <li className={pager.currentPage === 'active'}>
+                <li className={pager.currentPage === 'active'? 'active' : ''}>
                     <a>Go To {pager.currentPage}</a>
                 </li>
                 

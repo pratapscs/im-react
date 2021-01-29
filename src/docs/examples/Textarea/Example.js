@@ -21,18 +21,6 @@ const Example = () => {
             />
             <br />
             <br />
-
-            <Textarea
-                htmlId="question-textarea"
-                name="question"
-                placeholder="Type your message here"
-                onChange={() => showMessage()}
-                width={'60%'}
-                height={'150px'}
-            />
-            <br />
-            <br />
-
             <Textarea
                 htmlId="resize-textarea"
                 name="description"

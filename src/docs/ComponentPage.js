@@ -4,11 +4,11 @@ import Example from './Example';
 import Props from './Props';
 
 const ComponentPage = ({component}) => {
-  //alert(component.name);
   const {name, description, props, examples} = component;
+
   return (
     <div className="componentpage">
-      <h2>{name} Component</h2>
+      <h2>{name}</h2>
       <p>{description}</p>
 
       <h3>Example{examples.length > 1 && "s"}</h3>
@@ -33,6 +33,3 @@ ComponentPage.propTypes = {
 };
 
 export default ComponentPage;
-
-//export default withStyles(styles)(ComponentPage);
-
