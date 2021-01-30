@@ -1,152 +1,176 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import { Autocomplete } from "@material-ui/lab";
-import {
-    Box,
-    IconButton,
-    InputAdornment,
-    TextField,
-    withStyles
-} from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import { Box, InputAdornment, TextField, withStyles } from "@material-ui/core";
+import PropTypes from "prop-types";
 
-const IMSearch = ({
-    color,
-    width,
-    bgColor,
-    borderColor,
-    placeholder,
-    queryData,
-    queryAction,
-    getContactSuggestions
-}) => {
+class IMSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: "",
+      contactSuggestion: []
+    };
+  }
+
+  getSuggestions = (data) => {
+    if (data.length < this.props.searchIndex) {
+        this.setState((state, props) => ({
+            contactSuggestion: []
+          }));
+        return false;
+    }
+
+    this.setState((state, props) => ({
+      query: data
+    }));
+    const queryData = this.props.getContactSuggestions(data);
+    this.setState((state, props) => ({
+      contactSuggestion: queryData
+    }));
+  };
+
+  render() {
     const CssTextField = withStyles({
-        root: {
-            background: bgColor,
-            "& label.Mui-focused": {
-                color: borderColor
-            },
-            "& .MuiInput-underline:after": {
-                borderBottomColor: borderColor
-            },
-            "& .MuiOutlinedInput-root": {
-                "& fieldset": {
-                    borderColor: borderColor
-                },
-                "&:hover fieldset": {
-                    borderColor: borderColor
-                },
-                "&.Mui-focused fieldset": {
-                    borderColor: borderColor
-                }
-            }
+      root: {
+        background: this.props.bgColor,
+        "& label.Mui-focused": {
+          color: this.props.borderColor
+        },
+        "& .MuiInput-underline:after": {
+          borderBottomColor: this.props.borderColor
+        },
+        "& .MuiOutlinedInput-root": {
+          "& fieldset": {
+            borderColor: this.props.borderColor
+          },
+          "&:hover fieldset": {
+            borderColor: this.props.borderColor
+          },
+          "&.Mui-focused fieldset": {
+            borderColor: this.props.borderColor
+          }
         }
+      }
     })(TextField);
 
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            padding: "0px",
-            display: "flex",
-            alignItems: "center",
-            width: width,
-            color: color
-        },
-        iconButton: {
-            padding: 5,
-            color: "#828899"
-        },
-        addIconButton: {
-            background: bgColor,
-            border: "1px solid " + borderColor,
-            borderRadius: "5px",
-            marginTop: "5px",
-            padding: "7px",
-            color: "#7c8d9d"
-        }
-    }));
-    const classes = useStyles();
-
-    const [contactSuggestions, setContactSuggestions] = useState([]);
-    const [email, setEmail] = useState();
-    const getSuggestions = (query) => {
-        if (query.length < 3) return false;
-        setEmail(query);
-        const queryData = getContactSuggestions(query);
-        setContactSuggestions(queryData);
+    const styles = {
+      root: {
+        padding: "0px",
+        display: "flex",
+        alignItems: "center",
+        width: this.props.width,
+        color: this.props.color
+      },
+      iconButton: {
+        padding: 5,
+        color: "#828899"
+      },
+      addIconButton: {
+        background: this.props.bgColor,
+        border: "1px solid " + this.props.borderColor,
+        borderRadius: "5px",
+        marginTop: "5px",
+        padding: "7px",
+        color: "#7c8d9d"
+      }
     };
-
     return (
-        <div>
-            <Box display="flex" flexDirection="row" alignItems="center">
-                <Box>
-                    <Autocomplete
-                        className={classes.root}
-                        freeSolo
-                        id="free-solo-2-demo"
-                        disableClearable
-                        options={contactSuggestions}
-                        getOptionLabel={(option) => (option ? option.title : "")}
-                        onChange={(event, newValue) => {
-                            if (newValue != null) queryAction(newValue);
-                        }}
-                        renderInput={(params) => (
-                            <CssTextField
-                                {...params}
-                                autoFocus="true"
-                                name={email}
-                                onChange={(e) => getSuggestions(e.target.value)}
-                                placeholder={placeholder}
-                                size="small"
-                                variant="outlined"
-                                margin="normal"
-                                InputProps={{
-                                    ...params.InputProps,
-                                    type: "search",
-                                    startAdornment: (
-                                        <InputAdornment position="start">
-                                            <SearchIcon
-                                                fontSize="small"
-                                                className={classes.iconButton}
-                                            />
-                                        </InputAdornment>
-                                    )
-                                }}
-                            />
-                        )}
-                    />
-                </Box>
-                <Box p={1}>
-                    <IconButton
-                        size="small"
-                        color="primary"
-                        aria-label="add to shopping cart"
-                        className={classes.addIconButton}
-                    >
-                        <AddIcon />
-                    </IconButton>
-                </Box>
-            </Box>
-        </div>
+      <div>
+        <Box display="flex" flexDirection="row" alignItems="center">
+          <Box>
+            <Autocomplete
+              style={styles.root}
+              freeSolo
+              id="free-solo-2-demo"
+              disableClearable
+              options={this.state.contactSuggestion}
+              getOptionLabel={(option) => (option ? option.title : "")}
+              onChange={(event, newValue) => {
+                if (newValue != null) this.props.queryAction(newValue);
+              }}
+              renderInput={(params) => (
+                <CssTextField
+                  {...params}
+                  autoFocus = "true"
+                  name={this.state.query}
+                  onChange={(e) => this.getSuggestions(e.target.value)}
+                  placeholder={this.props.placeholder}
+                  size="small"
+                  variant="outlined"
+                  margin="normal"
+                  InputProps={{
+                    ...params.InputProps,
+                    type: "search",
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon
+                          fontSize="small"
+                          style={styles.iconButton}
+                        />
+                      </InputAdornment>
+                    )
+                  }}
+                />
+              )}
+            />
+          </Box>
+        </Box>
+      </div>
     );
-};
+  }
+}
 
 IMSearch.defaultProps = {
-    color: "#828899",
-    width: 300,
-    bgColor: "transparent",
-    borderColor: "#b7c7d6",
-    placeholder: "search",
-    queryData: [
-        { title: "Vinay", email: "vinay@zkteco.in" },
-        { title: "Pratap", email: "pratap@zkteco.in" }
-    ],
-    queryAction: (data) => alert(data.email),
-    getContactSuggestions: (query) => {
-        return [];
-    }
+  searchIndex: 2,
+  color: "#828899",
+  width: 300,
+  bgColor: "transparent",
+  borderColor: "#b7c7d6",
+  placeholder: "search",
+  queryAction: (data) => alert(data.email),
+  getContactSuggestions: (query) => {
+    if (!query) return [];
+    const queryData = [
+      { title: "Vinay", email: "vinay@zkteco.in" },
+      { title: "Vinjay", email: "vinay@zkteco.in" },
+      { title: "Pratap", email: "pratap@zkteco.in" }
+    ];
+    const result = queryData.map((data) => {
+      if (data.email.includes(query)) {
+        return data;
+      } else {
+        null;
+      }
+    });
+    return result;
+  }
 };
 
-IMSearch.propTypes = {};
+IMSearch.propTypes = {
+  /** Minimum number of the charcters required for search. */
+  searchIndex: PropTypes.number,
+
+  /** Search box text color. */
+  color: PropTypes.string,
+
+  /** Search box width */
+  width: PropTypes.number,
+
+  /** Search box background color */
+  bgColor: PropTypes.string,
+
+  /** Function to call on selecting the value from search result */
+  queryAction: PropTypes.func.isRequired,
+
+  /** Function to call on search to get search results */
+  getContactSuggestions: PropTypes.func.isRequired,
+
+  /** Search box border color */
+  borderColor: PropTypes.string,
+
+  /** Default String to display on seacrh box */
+  placeholder: PropTypes.string
+};
 
 export default IMSearch;
