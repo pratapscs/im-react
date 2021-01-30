@@ -6,13 +6,14 @@ const LeftSideBar = ({
     bgColor, 
     color, 
     width, 
-    height, 
-    border,
-    margin,  
+    height,  
+    margin, 
     padding, 
     position, 
     top, 
-    left, ...props}) => {
+    left, 
+    display, 
+    flexDirection, ...props}) => {
     return (
         <Fragment>
             <div 
@@ -26,7 +27,9 @@ const LeftSideBar = ({
                     padding:padding,
                     position:position,
                     top:top,
-                    left:left
+                    left:left,
+                    display:display,
+                    flexDirection:flexDirection
                 }}>
                 {props.children}                
             </div>
@@ -39,27 +42,23 @@ LeftSideBar.propTypes = {
     color: PropTypes.string,
     width: PropTypes.string,
     height: PropTypes.string,
-    border: PropTypes.string,
     margin: PropTypes.string,
     padding: PropTypes.string,
     position: PropTypes.string,
     top: PropTypes.string,
-    left: PropTypes.string
+    left: PropTypes.string,
+    display: PropTypes.string,
+    flexDirection: PropTypes.string
 };
 
 LeftSideBar.defaultProps = {
     bgColor: '#fff',
-    color: '#000000',
-    width: '325px',
+    color: '#000',
+    width: 'auto',
     height: '100vh',
     margin: '0 0 0 75px',
-    border: '1px solid #ddd',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    title: 'ZKTeco + Team', 
-    desc: 'Membership Application', 
-    time: '16:00'
+    display: 'flex',
+    flexDirection: 'column'
 };
 
 export default LeftSideBar;

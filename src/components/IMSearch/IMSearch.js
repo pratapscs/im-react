@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import { Autocomplete } from "@material-ui/lab";
-import {Box, IconButton, InputAdornment, TextField, withStyles} from "@material-ui/core";
+import {
+    Box,
+    IconButton,
+    InputAdornment,
+    TextField,
+    withStyles
+} from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 
 const IMSearch = ({
@@ -12,7 +18,8 @@ const IMSearch = ({
     borderColor,
     placeholder,
     queryData,
-    queryAction
+    queryAction,
+    getContactSuggestions
 }) => {
     const CssTextField = withStyles({
         root: {
@@ -60,6 +67,15 @@ const IMSearch = ({
     }));
     const classes = useStyles();
 
+    const [contactSuggestions, setContactSuggestions] = useState([]);
+    const [email, setEmail] = useState();
+    const getSuggestions = (query) => {
+        if (query.length < 3) return false;
+        setEmail(query);
+        const queryData = getContactSuggestions(query);
+        setContactSuggestions(queryData);
+    };
+
     return (
         <div>
             <Box display="flex" flexDirection="row" alignItems="center">
@@ -69,14 +85,17 @@ const IMSearch = ({
                         freeSolo
                         id="free-solo-2-demo"
                         disableClearable
-                        options={queryData}
-                        getOptionLabel={(option) => option.title}
+                        options={contactSuggestions}
+                        getOptionLabel={(option) => (option ? option.title : "")}
                         onChange={(event, newValue) => {
                             if (newValue != null) queryAction(newValue);
                         }}
                         renderInput={(params) => (
                             <CssTextField
                                 {...params}
+                                autoFocus="true"
+                                name={email}
+                                onChange={(e) => getSuggestions(e.target.value)}
                                 placeholder={placeholder}
                                 size="small"
                                 variant="outlined"
@@ -122,7 +141,10 @@ IMSearch.defaultProps = {
         { title: "Vinay", email: "vinay@zkteco.in" },
         { title: "Pratap", email: "pratap@zkteco.in" }
     ],
-    queryAction: (data) => alert(data.email)
+    queryAction: (data) => alert(data.email),
+    getContactSuggestions: (query) => {
+        return [];
+    }
 };
 
 IMSearch.propTypes = {};

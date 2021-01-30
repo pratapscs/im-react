@@ -30,14 +30,14 @@ function InvitationCard({bgColor, color, titleColor, subTitleColor, title, subTi
                 }}>
                 {props.children}
                 <GridContainer>
-                    <GridItem lg="auto">
+                    <GridItem lg="2">
                         <img src={InviteMedia} alt="Invite Member" />
                     </GridItem>
-                    <GridItem lg="auto">
+                    <GridItem lg="7">
                         <p className="im-title" style={{color:titleColor}}><b>{title}</b></p>
                         <p className="im-sub-title" style={{color:subTitleColor}}>{subTitle}</p>
                     </GridItem>
-                    <GridItem lg="auto" textAlign="center">
+                    <GridItem lg="3" textAlign="center">
                         <IMIcon icon="CloseIcon" size="25" onClose={() => onClose()} />
                         <IMButton background="#36c96d" size="small" onClick={() => onClick()}>Invite</IMButton>
                     </GridItem>
@@ -58,16 +58,15 @@ InvitationCard.propTypes = {
     height: PropTypes.string,
     position: PropTypes.string,
     margin: PropTypes.string
-
 };
 
 InvitationCard.defaultProps = {
-    width: "100%",
+    width: "auto",
     height: "100px",
     bgColor: "#eef6fc",
+    margin: "16px",
     titleColor: "#304669",
     subTitleColor: "#7c8d9d",
-    margin: "16px 0"
 };
 
 export default InvitationCard;

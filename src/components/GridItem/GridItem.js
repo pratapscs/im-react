@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Grid} from '@material-ui/core';
 
 
-function GridItem({bgColor, xs, sm, md, lg, padding, margin, display, justify, alignItems, textAlign, float, ...props}) {
+function GridItem({bgColor, xs, sm, md, lg, xl, padding, margin, display, justify, alignItems, textAlign, float, ...props}) {
     return (
         <Fragment>
             <Grid 
@@ -11,7 +11,8 @@ function GridItem({bgColor, xs, sm, md, lg, padding, margin, display, justify, a
                 xs={xs} 
                 sm={sm} 
                 md={md} 
-                lg={lg} 
+                lg={lg}
+                xl={xl} 
                 style={{
                     background:bgColor, 
                     padding:padding,
@@ -29,10 +30,11 @@ function GridItem({bgColor, xs, sm, md, lg, padding, margin, display, justify, a
 }
 GridItem.prototypes = {
     bgColor: PropTypes.string,
-    xs: PropTypes.string,
-    sm: PropTypes.string,
-    md: PropTypes.string,
-    lg: PropTypes.string,
+    xs: PropTypes.number,
+    sm: PropTypes.number,
+    md: PropTypes.number,
+    lg: PropTypes.number,
+    xl: PropTypes.number,
     padding: PropTypes.string,
     margin: PropTypes.string,
     display: PropTypes.string,
@@ -43,11 +45,7 @@ GridItem.prototypes = {
 };
 
 GridItem.defaultProps = {
-    bgColor: 'none',
-    xs: 'auto',
-    sm: 'auto',
-    md: 'auto',
-    lg: 'auto',
+    xs: 12,
     padding: '0',
     margin: '0',
 };

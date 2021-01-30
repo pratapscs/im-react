@@ -59,12 +59,8 @@ RightMainPage.propTypes = {
 RightMainPage.defaultProps = {
     bgColor: '#fff',
     color: '#000000',
-    width: 'auto',
+    width: '100%',
     height: '100vh',
-    // marginLeft: '400px',
-    border: '1px solid #ddd',
-    position: 'staic',
-    top: '0'
 };
 
 export default RightMainPage;

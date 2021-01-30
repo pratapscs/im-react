@@ -16,14 +16,14 @@ ChatBody.propTypes = {
     height: PropTypes.string,   
     margin: PropTypes.string,
     padding: PropTypes.string,
-
 }
 ChatBody.defaultProps = {
     bgColor: '#f5f6fa',
     color:'#313c6a',
     width: '100%',
     padding:'16px',
-    height: '100%',   
+    height: '-webkit-fill-available', 
+    margin: '75px 0',  
 
 };
 
