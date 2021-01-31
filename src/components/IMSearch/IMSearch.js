@@ -57,6 +57,7 @@ class IMSearch extends React.Component {
     const styles = {
       root: {
         padding: "0px",
+        margin: "0 16px",
         display: "flex",
         alignItems: "center",
         width: this.props.width,

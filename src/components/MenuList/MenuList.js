@@ -22,16 +22,21 @@ const MenuList = ({
     textAlign, 
     margin, 
     padding, 
-    onClick, ...props}) => {
+    onClick,
+    contact, ...props}) => {
+    
+    const returnContact = () => {
+        onClick(contact)
+    };
     return (
         <Fragment>
             <List className="im-menu-list" component="nav" aria-label="main mailbox folders">
-                <ListItem onClick={onClick} style={{background:bgColor, color:color, width:width, height:height}}>
+                <ListItem onClick={returnContact} style={{background:bgColor, color:color, width:width, height:height}}>
                     <ListItemAvatar>
-                        <IMAvatar variant="circular" />
+                        <IMAvatar variant="circular" src={contact.profile}/>
                     </ListItemAvatar>
-                    <ListItemText primary={title} secondary={desc} style={{color:titleColor}} />
-                    <ListItemText secondary={time} style={{textAlign:textAlign, color:timeColor}} />
+                    <ListItemText primary={contact.name} secondary={contact.message} style={{color:titleColor}} />
+                    <ListItemText secondary={contact.time} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>
             </List>
@@ -58,6 +63,12 @@ MenuList.propTypes = {
 };
 
 MenuList.defaultProps = {
+    contact:{
+        name: 'Default',
+        message: 'This is default message',
+        profile: '',
+        time: '10:10'
+    },
     bgColor: '#f5f7fa',
     color: '#fff',
     titleColor: '#304669',
@@ -67,6 +78,7 @@ MenuList.defaultProps = {
     time: '15:35',
     textAlign: 'right',
     timeColor: '#bfccd7',
+    onClick: (data) => alert(data)
 };
 
 export default MenuList;
