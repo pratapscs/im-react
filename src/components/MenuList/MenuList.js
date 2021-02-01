@@ -36,7 +36,7 @@ const MenuList = ({
                         <IMAvatar variant="circular" src={contact.profile}/>
                     </ListItemAvatar>
                     <ListItemText primary={contact.name} secondary={contact.message} style={{color:titleColor}} />
-                    <ListItemText secondary={contact.time} style={{textAlign:textAlign, color:timeColor}} />
+                    <ListItemText secondary={contact.sentTime} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>
             </List>

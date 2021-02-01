@@ -77,7 +77,7 @@ class IMSearch extends React.Component {
       }
     };
     return (
-      <div>
+      <div style={{width:"100%"}}>
         <Box display="flex" flexDirection="row" alignItems="center">
           <Box>
             <Autocomplete
@@ -86,7 +86,7 @@ class IMSearch extends React.Component {
               id="free-solo-2-demo"
               disableClearable
               options={this.state.contactSuggestion}
-              getOptionLabel={(option) => (option ? option.title : "")}
+              getOptionLabel={(option) => (option ? option.firstName + option.lastName : "")}
               onChange={(event, newValue) => {
                 if (newValue != null) this.props.queryAction(newValue);
               }}
@@ -133,15 +133,13 @@ IMSearch.defaultProps = {
   getContactSuggestions: (query) => {
     if (!query) return [];
     const queryData = [
-      { title: "Vinay", email: "vinay@zkteco.in" },
-      { title: "Vinjay", email: "vinay@zkteco.in" },
-      { title: "Pratap", email: "pratap@zkteco.in" }
+      { firstName: "Vinay",lastName:"", email: "vinay@zkteco.in" }
     ];
     const result = queryData.map((data) => {
       if (data.email.includes(query)) {
         return data;
       } else {
-        null;
+        return null;
       }
     });
     return result;

@@ -58,8 +58,12 @@ ChatItem.defaultProps = {
  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
  fontWeight: "small",
  float: "left",
- color: "#000"
+ color: "#000",
+ textColor:"#304669",
+ name : "pratap@zkteco.in",
+ datetime: "01-02-2020"
 };
+
  
 ChatItem.propTypes = {
  avatar: PropTypes.element.isRequired,
@@ -69,7 +73,10 @@ ChatItem.propTypes = {
  fontWeight: PropTypes.string,
  fontSize: PropTypes.string,
  float: PropTypes.string,
- color: PropTypes.string
+ color: PropTypes.string,
+ textColor:PropTypes.string,
+ name : PropTypes.string,
+ datetime: PropTypes.string
 };
  
 export default ChatItem;
