@@ -2,11 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import iconPath from "../IMIcon/IconLib";
 
-function IMIcon  ({size, color, icon, className, viewBox})  {
- 
+const defaultStyles = { display: "inline-block", verticalAlign: "middle", padding:"5px"};
+
+function IMIcon  ({size, color, icon, className, style, viewBox})  {
+  const styles = { ...defaultStyles, ...style };
+  
   return (
     <svg
       className={className}
+      style={styles}
       viewBox={viewBox}
       width={`${size}px`}
       height={`${size}px`}
@@ -21,17 +25,21 @@ function IMIcon  ({size, color, icon, className, viewBox})  {
 };
 
 IMIcon.defaultProps = {
-  size: "35",
+  size: 35,
   color: "#7c8d9d",
   viewBox: "0 0 24 24",
+  style: {
+
+  },
   className: "",
 };
 
 IMIcon.propTypes = {
-  size: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
   color: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   viewBox: PropTypes.string.isRequired,
+  style: PropTypes.shape(PropTypes.object),
   className: PropTypes.string,
 };
 

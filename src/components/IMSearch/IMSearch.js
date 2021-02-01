@@ -15,10 +15,10 @@ class IMSearch extends React.Component {
 
   getSuggestions = (data) => {
     if (data.length < this.props.searchIndex) {
-        this.setState((state, props) => ({
-            contactSuggestion: []
-          }));
-        return false;
+      this.setState((state, props) => ({
+        contactSuggestion: []
+      }));
+      return false;
     }
 
     this.setState((state, props) => ({
@@ -93,7 +93,7 @@ class IMSearch extends React.Component {
               renderInput={(params) => (
                 <CssTextField
                   {...params}
-                  autoFocus = "true"
+                  autoFocus="true"
                   name={this.state.query}
                   onChange={(e) => this.getSuggestions(e.target.value)}
                   placeholder={this.props.placeholder}

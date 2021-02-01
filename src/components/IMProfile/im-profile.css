@@ -1,0 +1,19 @@
+.profile_title{
+    font-size: 22px;
+    color:white;
+    margin:0px;
+    padding-left: 15px;
+}
+.profile_subtitle
+{
+    font-size: 16px;
+    color:white;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 5px;
+}
+.profile_text
+{
+    display: flex;
+    margin: 0;
+}
