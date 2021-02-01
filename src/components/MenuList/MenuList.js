@@ -35,7 +35,7 @@ const MenuList = ({
                     <ListItemAvatar>
                         <IMAvatar variant="circular" src={contact.profile}/>
                     </ListItemAvatar>
-                    <ListItemText primary={contact.name} secondary={contact.message} style={{color:titleColor}} />
+                    <ListItemText primary={contact.firstName + " " + contact.lastName ? contact.lastName : ''} secondary={contact.message} style={{color:titleColor}} />
                     <ListItemText secondary={contact.sentTime} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>

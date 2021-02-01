@@ -86,7 +86,7 @@ class IMSearch extends React.Component {
               id="free-solo-2-demo"
               disableClearable
               options={this.state.contactSuggestion}
-              getOptionLabel={(option) => (option ? option.firstName + option.lastName : "")}
+              getOptionLabel={(option) => (option ? (option.firstName + " " + (option.lastName ? option.lastName : '')) : "")}
               onChange={(event, newValue) => {
                 if (newValue != null) this.props.queryAction(newValue);
               }}

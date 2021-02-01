@@ -1,6 +1,7 @@
 
 .mg-textarea {
-    width: 100%;
+    /* width: 100%; */
+    width: 90%;
 }
 
 .mg-textarea textarea {
@@ -8,6 +9,7 @@
     border-radius: 2px;
     font-size: 15px;
     padding: 12px;
+    padding-right: 12.8%;
     margin: 5px 0;
     outline: none;
 }

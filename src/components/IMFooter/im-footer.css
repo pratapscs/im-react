@@ -1,0 +1,5 @@
+.im-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+    width: calc(100% - 25%);
+}
