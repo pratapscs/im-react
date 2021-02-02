@@ -6,7 +6,7 @@ import {ListItemText} from '@material-ui/core';
 import {ListItemAvatar} from '@material-ui/core';
 import IMAvatar from '../IMAvatar/IMAvatar';
 import './menu-list.css'
-
+ 
 const MenuList = ({
     id, 
     width, 
@@ -28,6 +28,10 @@ const MenuList = ({
     const returnContact = () => {
         onClick(contact)
     };
+ 
+    const name = contact.firstName + (contact.lastName ? " "+contact.lastName : '')
+    const channelName = contact.channelName
+ 
     return (
         <Fragment>
             <List className="im-menu-list" component="nav" aria-label="main mailbox folders">
@@ -35,7 +39,7 @@ const MenuList = ({
                     <ListItemAvatar>
                         <IMAvatar variant="circular" src={contact.profile}/>
                     </ListItemAvatar>
-                    <ListItemText primary={contact.firstName + " " + contact.lastName ? contact.lastName : ''} secondary={contact.message} style={{color:titleColor}} />
+                    <ListItemText primary={name !== 'undefined' ? name : channelName} secondary={contact.message} style={{color:titleColor}} />
                     <ListItemText secondary={contact.sentTime} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>
@@ -43,7 +47,7 @@ const MenuList = ({
         </Fragment>
     );
 }
-
+ 
 MenuList.propTypes = {
     id: PropTypes.string,
     onClick: PropTypes.func,
@@ -61,10 +65,11 @@ MenuList.propTypes = {
     width: PropTypes.string,
     height: PropTypes.string
 };
-
+ 
 MenuList.defaultProps = {
     contact:{
-        name: 'Default',
+        firstName: 'Default',
+        lastName:'',
         message: 'This is default message',
         profile: '',
         time: '10:10'
@@ -80,5 +85,5 @@ MenuList.defaultProps = {
     timeColor: '#bfccd7',
     onClick: (data) => alert(data)
 };
-
+ 
 export default MenuList;
