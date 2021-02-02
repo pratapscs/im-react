@@ -1,20 +1,26 @@
 import React, { Fragment } from 'react';
 import MenuList from 'im-react/MenuList';
-
+ 
 export default function MenuListExample() {
     const leftSideBarMenuListClicked = (data) => {
-        alert(data.name)
+        alert(JSON.stringify(data))
     };
     const contact = {
-        name:"vinay",
+        firstName:"vinay",
         message: "Hi pratap",
         profile: "",
-        time: "10:10"
+        startTime: "10:10"
+    }
+    const channel = {
+        channelName:"channel",
+        message: "Hi Vinay",
+        profile: "",
+        startTime: "10:10"
     }
     return (
         <Fragment>
-            <MenuList onClick={leftSideBarMenuListClicked} width="25%" bgColor="#fff" title="ZKTeco + Team" desc="Membership Application" time="16:00" contact = {contact}/>
-            <MenuList onClick={leftSideBarMenuListClicked} width="25%" bgColor="#fff" title="Miracy" desc="Miracy invited Zhong Wenkang to join the.." time="15:35" />
+            <MenuList onClick={leftSideBarMenuListClicked} width="25%" bgColor="#fff" contact = {contact}/>
+            <MenuList onClick={leftSideBarMenuListClicked} width="25%" bgColor="#fff" contact = {channel} />
         </Fragment>
     );
 }

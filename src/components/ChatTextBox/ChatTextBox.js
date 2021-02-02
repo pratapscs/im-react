@@ -1,32 +1,50 @@
-import React, { Fragment, useState } from 'react';
-import PropTypes from "prop-types";
-import { Box } from '@material-ui/core';
+import React, { Fragment } from "react";
+import {Box,IconButton} from "@material-ui/core";
 import Textarea from 'im_react_service/lib/Textarea';
-import IconButton from "@material-ui/core/IconButton";
-import IMIcon from 'im_react_service/lib/IMIcon';
+import IMIcon from "im_react_service/lib/IMIcon/IMIcon";
 
-const ChatTextBox = ({color, onClick}) => {
-    const [message, setMessage] = useState("")
+class ChatTextBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "",
+      contactSuggestion: []
+    };
+  }
+
+  handleChange = (e) => {
+    this.setState({
+        message:e.target.value
+    })
+  };
+
+  handleSubmit = () => {
+      if(this.state.message){
+        this.props.sendMessage(this.state.message)
+      } else {
+          alert("Please type the message")
+      }
+  }
+
+  render() {
     return (
         <Fragment>
-            <Box style={{margin:"0 16px"}} width="100%">
-                <Textarea width="100%" placeholder="Type a new message"  onChange = {(e) => setMessage(e.target.value)}/>
+            <Box style={{ margin: "0 16px" }} width="100%">
+                <Textarea width="100%" placeholder="Type a new message" onChange = {this.handleChange}/>
             </Box>
             <Box style={{ display: 'flex', alignItems: 'center', position: 'relative', right: '45px' }}>
-                <IconButton aria-label="send">
-                    <IMIcon icon="send" color={color}  onClick={onClick(message)}/>
+                <IconButton aria-label="send" onClick = {this.handleSubmit}>
+                    <IMIcon icon="send" color={this.props.color} />
                 </IconButton>
             </Box>
         </Fragment>
     );
+  }
 }
-ChatTextBox.propTypes = {
-    color: PropTypes.string,
-    onClick:PropTypes.func,
-};
 
 ChatTextBox.defaultProps = {
-    color: "#304669",
+  color: "#828899",
+  sendMessage: (data) => alert(data)
 };
 
 export default ChatTextBox;
