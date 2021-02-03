@@ -1,6 +1,10 @@
 {
   "name": "im_react_service",
+<<<<<<< HEAD
   "version": "1.2.6",
+=======
+  "version": "1.2.7",
+>>>>>>> c29fbd14a6857801143860e261062d94fe10c20f
   "main": "./lib/index.js",
   "engines": {
     "node": ">=4.0.0"
