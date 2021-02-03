@@ -1,1 +1,1 @@
-export { default } from './IMSelect';
+export {default} from './IMSelect';

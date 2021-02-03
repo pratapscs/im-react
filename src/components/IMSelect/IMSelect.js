@@ -1,49 +1,90 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
+import React, { Children, Fragment } from 'react'
+import PropTypes from 'prop-types'
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import './im_select.css'
 
-const IMSelect = ({ width, queryData, role }) => {
-  const useStyles = makeStyles((theme) => ({
-    formControl: {
-      margin: theme.spacing(1),
-      minWidth: width
-    },
-    selectEmpty: {
-      marginTop: theme.spacing(2)
-    }
-  }));
+function IMSelect({ id,
+    value,
+    placeholder,
+    onChange,
+    defaultValue,
+    autoWidth,
+    displayEmpty,
+    IconComponent,
+    input,
+    label,
+    labelId,
+    labelWidth,
+    variant,
+    fullWidth,
+    margin,
+    select,
+    ...props }) {
 
-  const classes = useStyles();
+    const [attendees, setAttendees] = React.useState('1');
 
-  return (
-    <div>
-      <FormControl variant="outlined" className={classes.formControl}>
-        <InputLabel>{role}</InputLabel>
-        <Select>
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          {queryData.map((fbb) => (
-            <MenuItem value={fbb.key}>{fbb.role}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
-  );
-};
+    const handleChange = (event) => {
+        setAttendees(event.target.value);
+    };
 
+    return (
+        <Fragment>
+              <form noValidate autoComplete="off">
+            {/* <FormLabel>Select Time Zone</FormLabel> */}
+                <TextField
+                    id="List of attendees"
+                    value={attendees}
+                    placeholder={placeholder}
+                    onChange={handleChange}
+                    defaultValue={defaultValue}
+                    autoWidth={autoWidth}
+                    fullWidth={fullWidth}
+                    variant={variant}
+                    margin={margin}
+                    displayEmpty={displayEmpty}
+                    IconComponent={IconComponent}
+                    input={input}
+                    label={label}
+                    labelId={labelId}
+                    labelWidth={labelWidth}
+                    className="form-control"
+                    select={select}
+                >
+                    {props.children}
+                   
+                </TextField>  
+                </form>
+        </Fragment>
+    )
+}
+
+IMSelect.propTypes = {
+    id: PropTypes.string,
+    value: PropTypes.any,
+    placeholder: PropTypes.string,
+    onChange: PropTypes.string,
+    defaultValue: PropTypes.any,
+    autoWidth: PropTypes.bool,
+    displayEmpty: PropTypes.bool,
+    IconComponent: PropTypes.elementType,
+    input: PropTypes.element,
+    label: PropTypes.node,
+    labelId: PropTypes.string,
+    labelWidth: PropTypes.number,
+    variant: PropTypes.string,
+    fullWidth: PropTypes.string,
+    margin: PropTypes.string,
+    select: PropTypes.string,
+
+}
 IMSelect.defaultProps = {
-  width: 120,
-  role: "Role",
-  queryData: [
-    { key: "1", role: "host" },
-    { key: "2", role: "member" }
-  ]
+
+    value: 'user1',
+    fullWidth:'fullWidth',
+    margin: 'dense',
+    variant: 'outlined',
+    select:'select',
 };
-
-IMSelect.propTypes = {};
-
 export default IMSelect;
+

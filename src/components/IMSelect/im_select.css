@@ -1,0 +1,8 @@
+.form-control div{
+    font-size: 14px;
+    color: rgba(48 70 105 / 0.6);
+    width: 100%;
+}
+.form-control .MuiSelect-select{
+    margin-bottom: 0rem;
+}
