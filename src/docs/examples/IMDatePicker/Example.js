@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import IMProfile from 'im-react/IMProfile';
 import IMDatePicker from 'im-react/IMDatePicker';
 
 function Example() {

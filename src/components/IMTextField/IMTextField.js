@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField';
-import FormLabel from '@material-ui/core/FormLabel';
 import './im_textfield.css'
 
 function IMTextField({ htmlId, placeholder,

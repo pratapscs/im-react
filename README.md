@@ -1,5 +1,5 @@
 ## Install
 ```
 
-npm install im_react_service
+npm install zk-minervaiot-im
 ```
