@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import IMIcon from '../IMIcon/IMIcon';
 import IMButton from '../IMButton/IMButton';
 import './invitation-card.css';
-import InviteMedia from '../../assets/images/invite.png';
+import InviteMedia from './invite.png';
 import GridContainer from '../GridContainer';
 import GridItem from '../GridItem';
 
