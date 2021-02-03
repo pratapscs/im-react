@@ -1,1 +1,1 @@
-export { default } from './IMList'
+export { default } from './IMList';
