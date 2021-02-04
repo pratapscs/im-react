@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import IMcard from '../IMCard/IMCard';
-import IMCardBody from '../IMCardBody/IMCardBody';
-import IMAvatar from '../IMAvatar/IMAvatar';
-import IMIcon from '../IMIcon/IMIcon';
-import GridContainer from '../GridContainer/GridContainer';
-import GridItem from '../GridItem/GridItem';
+import IMcard from '../IMCard';
+import IMCardBody from '../IMCardBody';
+import IMAvatar from '../IMAvatar';
+import IMIcon from '../IMIcon';
+import GridContainer from '../GridContainer';
+import GridItem from '../GridItem';
 import './im-profile.css';
-import IMList from '../IMList/IMList';
+import IMList from '../IMList';
 
 
 function IMProfile({ title, subTitle, ...props }) {

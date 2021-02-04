@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import {Box,IconButton} from "@material-ui/core";
-import Textarea from 'im_react_service/lib/Textarea';
-import IMIcon from "im_react_service/lib/IMIcon/IMIcon";
+import Textarea from '../Textarea';
+import IMIcon from "../IMIcon";
 
 class ChatTextBox extends React.Component {
   constructor(props) {

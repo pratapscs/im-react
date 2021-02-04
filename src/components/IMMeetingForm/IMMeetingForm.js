@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
-import IMTextField from '../IMTextField/IMTextField'
-import GridContainer from '../GridContainer/GridContainer'
-import GridItem from '../GridItem/GridItem'
+import React, { Fragment } from 'react';
+import IMTextField from '../IMTextField';
+import GridContainer from '../GridContainer';
+import GridItem from '../GridItem';
 import { FormLabel } from '@material-ui/core';
-import IMSelect from '../IMSelect/IMSelect'
-import IMDatePicker from '../IMDatePicker/IMDatePicker'
-import IMTimePicker from '../IMTimePicker/IMTimePicker'
-import IMButton from '../IMButton/IMButton'
+import IMSelect from '../IMSelect';
+import IMDatePicker from '../IMDatePicker';
+import IMTimePicker from '../IMTimePicker';
+import IMButton from '../IMButton';
 import MenuItem from '@material-ui/core/MenuItem';
 
 function IMMeetingForm(props) {

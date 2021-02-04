@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IMIcon from "im_react_service/lib/IMIcon";
+import IMIcon from "../IMIcon";
 import IconButton from "@material-ui/core/IconButton";
+
 function IMChatHeaderAction({ color, onClick }) {
   return (
     <div>

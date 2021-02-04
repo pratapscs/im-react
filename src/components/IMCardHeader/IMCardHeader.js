@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import IMAvatar from "../IMAvatar/IMAvatar";
-import IMIcon from "../IMIcon/IMIcon";
-import IMCardHeaderAction from "../IMCardHeaderAction/IMCardHeaderAction";
+import IMAvatar from "../IMAvatar";
+import IMIcon from "../IMIcon";
+import IMCardHeaderAction from "../IMCardHeaderAction";
 import "./im-card-header.css";
 
 function IMCardHeader({

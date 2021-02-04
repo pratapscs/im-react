@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import IMIcon from '../IMIcon/IMIcon';
-
-
+import IMIcon from '../IMIcon';
 
 function IMCardHeaderAction({bgColor, color, size, margin, padding, icon, iconSize, id, onClick, ...props}) {
     return (
@@ -28,7 +26,6 @@ IMCardHeaderAction.propTypes = {
 }; 
 IMCardHeaderAction.defaultProps = {
    iconSize:20,
-
 };
 export default IMCardHeaderAction;
 

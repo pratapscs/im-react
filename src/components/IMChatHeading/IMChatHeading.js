@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IMAvatar from "im_react_service/lib/IMAvatar";
-import IMHeading from "../IMHeading/IMHeading";
+import IMAvatar from "../IMAvatar";
+import IMHeading from "../IMHeading";
 
 function IMChatHeading({
   avatar,

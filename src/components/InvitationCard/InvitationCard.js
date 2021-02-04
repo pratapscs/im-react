@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import IMIcon from '../IMIcon/IMIcon';
-import IMButton from '../IMButton/IMButton';
+import IMIcon from '../IMIcon';
+import IMButton from '../IMButton';
 import './invitation-card.css';
 import InviteMedia from './invite.png';
 import GridContainer from '../GridContainer';

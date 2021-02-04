@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import IMAvatar from '../IMAvatar/IMAvatar';
+import IMAvatar from '../IMAvatar';
 
 function IMListItemAvatar() {
     return (

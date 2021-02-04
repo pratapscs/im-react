@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import IMIcon from '../IMIcon/IMIcon';
-import IMListItemIcon from '../IMListItemIcon/IMListItemIcon';
-import IMListItemText from '../IMListItemText/IMListItemText';
-import IMListItemSecondaryAction from '../IMListItemSecondaryAction/IMListItemSecondaryAction'
+import IMIcon from '../IMIcon';
+import IMListItemIcon from '../IMListItemIcon';
+import IMListItemText from '../IMListItemText';
+import IMListItemSecondaryAction from '../IMListItemSecondaryAction'
 import { Divider } from '@material-ui/core';
 
 function IMList({ component, dense, disablePadding, height, width, bgColor, color, onClick, button, itemTitle, itemSubtitle,  fontSize, icon1, icon2, id, ...props }) {
