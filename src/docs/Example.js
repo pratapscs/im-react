@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import CodeExample from './CodeExample';
 
@@ -21,19 +21,21 @@ class Example extends React.Component {
     // Must use CommonJS require to dynamically require because ES Modules must be statically analyzable.
     const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default;
     return (
-      <div className="example">
-        {description && <h4>{description}</h4> }
+      <Fragment>
+        <div className="example">
+          {description && <h4>{description}</h4> }
 
-        <ExampleComponent />
+          <ExampleComponent />
 
-        <p>
-          <a href="" onClick={this.toggleCode}>
-            {showCode ? "Hide" : "Show"} Code
-          </a>
-        </p>
+          <p>
+            <a href="" onClick={this.toggleCode}>
+              {showCode ? "Hide" : "Show"} Code
+            </a>
+          </p>
 
-        {showCode && <CodeExample>{code}</CodeExample>}
+          {showCode && <CodeExample>{code}</CodeExample>}
       </div>
+      </Fragment>
     )
   }
 }

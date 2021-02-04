@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './chat-header.css';
 
 function ChatHeader({bgColor, color, width, height, margin, padding, ...props }) {
     return (
-        <Fragment>
+     
             <div className="im-chat-header" style={{background:bgColor, color:color, width:width, height:height, margin:margin, padding:padding}}>
                 {props.children}            
             </div>
-        </Fragment>
+       
     );
 };
 
@@ -26,6 +26,6 @@ ChatHeader.defaultProps = {
     width: '100%',
     padding:'0 16px',
     height: '75px'   
-  };
+};
 
 export default ChatHeader;

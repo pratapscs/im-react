@@ -8,7 +8,8 @@ function ChatFooter({bgColor, color, width, height, margin, padding, position, b
             {props.children}          
         </div>
     )
-}
+};
+
 ChatFooter.propTypes = {
     bgColor: PropTypes.string,
     color: PropTypes.string,
@@ -18,7 +19,8 @@ ChatFooter.propTypes = {
     padding: PropTypes.string,
     position: PropTypes.string,
     bottom: PropTypes.string,
-}
+};
+
 ChatFooter.defaultProps = {
     bgColor: '#FFFFFF',
     color:'#707070',
@@ -29,4 +31,5 @@ ChatFooter.defaultProps = {
     bottom: '0px',   
 
 };
+
 export default ChatFooter;
