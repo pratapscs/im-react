@@ -17,6 +17,19 @@ export default function IMIconExample() {
         <IMIcon icon="playCircleOutlineIcon" />
         <IMIcon icon="editIcon" />
         <IMIcon icon="deleteIcon" />
+        <IMIcon icon="videoIcon" />
+        <IMIcon icon="messageIcon" />
+        <IMIcon icon="mobileSettingIcon" />
+        <IMIcon icon="downloadIcon" />
+        <IMIcon icon="groupAddIcon" />
+        <IMIcon icon="emojiIcon" />
+        <IMIcon icon="contactIcon" />
+        <IMIcon icon="workbenchIcon" />
+        <IMIcon icon="phoneClockIcon" />
+        <IMIcon icon="wisdomCloudUDiskIcon" />
+        <IMIcon icon="MyTeamIcon" />
+        <IMIcon icon="deviceIcon" />
+        <IMIcon icon="settingIcon" />
       </Fragment>
   );
 }
