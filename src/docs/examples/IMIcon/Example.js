@@ -13,6 +13,10 @@ export default function IMIconExample() {
         <IMIcon color="" icon="settings" />
         <IMIcon color="indigo" icon="invite" />
         <IMIcon color="red" icon="CloseIcon" />
+        <IMIcon icon="playCircleFilledIcon" />
+        <IMIcon icon="playCircleOutlineIcon" />
+        <IMIcon icon="editIcon" />
+        <IMIcon icon="deleteIcon" />
       </Fragment>
   );
 }
