@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
-import './im_select.css'
+import './im_select.css';
 
 function IMSelect({ id,
     value,
@@ -29,8 +29,8 @@ function IMSelect({ id,
 
     return (
         <Fragment>
-              <form noValidate autoComplete="off">
-            {/* <FormLabel>Select Time Zone</FormLabel> */}
+            <form noValidate autoComplete="off">
+                {/* <FormLabel>Select Time Zone</FormLabel> */}
                 <TextField
                     id="List of attendees"
                     value={attendees}
@@ -51,9 +51,9 @@ function IMSelect({ id,
                     select={select}
                 >
                     {props.children}
-                   
-                </TextField>  
-                </form>
+
+                </TextField>
+            </form>
         </Fragment>
     )
 }
@@ -80,10 +80,10 @@ IMSelect.propTypes = {
 IMSelect.defaultProps = {
 
     value: 'user1',
-    fullWidth:'fullWidth',
+    fullWidth: 'fullWidth',
     margin: 'dense',
     variant: 'outlined',
-    select:'select',
+    select: 'select',
 };
 export default IMSelect;
 

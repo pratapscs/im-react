@@ -1,23 +1,23 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const ToolBar = ({bgColor, color, width, height, margin, padding, position, top, left, display, flexDirection, ...props}) => {
+const ToolBar = ({ bgColor, color, width, height, margin, padding, position, top, left, display, flexDirection, ...props }) => {
     return (
         <Fragment>
             <div style={{
-                    background:bgColor, 
-                    color:color, 
-                    width:width, 
-                    height:height, 
-                    margin:margin, 
-                    padding:padding,
-                    position:position,
-                    top:top,
-                    left:left,
-                    display:display,
-                    flexDirection:flexDirection
-                    }}>
-                {props.children}                
+                background: bgColor,
+                color: color,
+                width: width,
+                height: height,
+                margin: margin,
+                padding: padding,
+                position: position,
+                top: top,
+                left: left,
+                display: display,
+                flexDirection: flexDirection
+            }}>
+                {props.children}
             </div>
         </Fragment>
     );
@@ -44,8 +44,8 @@ ToolBar.defaultProps = {
     height: '100vh',
     margin: '0',
     padding: '0',
-    display:'flex',
-    flexDirection:'column',
+    display: 'flex',
+    flexDirection: 'column',
 };
 
 export default ToolBar;

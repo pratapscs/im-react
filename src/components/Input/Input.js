@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import Label from '../Label';
-
 import './Input.css';
 
 /** Input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */

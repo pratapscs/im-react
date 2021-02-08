@@ -2,40 +2,40 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 const RightMainPage = ({
-    bgColor, 
-    color, 
-    width, 
-    height, 
+    bgColor,
+    color,
+    width,
+    height,
     border,
-    margin, 
-    marginLeft, 
-    marginRight, 
+    margin,
+    marginLeft,
+    marginRight,
     padding,
-    paddingLeft, 
+    paddingLeft,
     paddingRight,
-    position, 
-    top, 
-    left, ...props}) => {
+    position,
+    top,
+    left, ...props }) => {
     return (
         <Fragment>
-            <div 
+            <div
                 className="right-main-page"
                 style={{
-                    background:bgColor, 
-                    color:color, 
-                    width:width, 
-                    height:height, 
-                    margin:margin,
-                    marginLeft:marginLeft, 
-                    marginRight:marginRight, 
-                    padding:padding,
-                    paddingLeft:paddingLeft, 
-                    paddingRight:paddingRight,
-                    position:position,
-                    top:top,
-                    left:left
+                    background: bgColor,
+                    color: color,
+                    width: width,
+                    height: height,
+                    margin: margin,
+                    marginLeft: marginLeft,
+                    marginRight: marginRight,
+                    padding: padding,
+                    paddingLeft: paddingLeft,
+                    paddingRight: paddingRight,
+                    position: position,
+                    top: top,
+                    left: left
                 }}>
-                {props.children}                
+                {props.children}
             </div>
         </Fragment>
     );

@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
-import './layout.css'; 
+import './layout.css';
 
-function Layout({bgColor, color, width, height, fontFamily, ...props}) {
+function Layout({ bgColor, color, width, height, fontFamily, ...props }) {
     return (
-        <div 
+        <div
             className="layout"
             style={{
-                background:bgColor, 
-                color:color, 
-                width:width, 
-                height:height, 
-                fontFamily:fontFamily
+                background: bgColor,
+                color: color,
+                width: width,
+                height: height,
+                fontFamily: fontFamily
             }}>
-           {props.children}     
+            {props.children}
         </div>
     )
 }
@@ -24,13 +24,13 @@ Layout.propTypes = {
     height: PropTypes.string,
     fontFamily: PropTypes.string,
 };
- 
+
 Layout.defaultProps = {
     bgColor: '#FFF',
     color: '#333',
     width: '100%',
     height: '100%',
     fontFamily: 'Roboto',
-  };
+};
 
 export default Layout;

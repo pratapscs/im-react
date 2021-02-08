@@ -39,8 +39,8 @@ function IMHeader({
           borderTop: borderTop,
           borderRight: borderRight,
           borderBottom: borderBottom,
-          lineHeight:height,
-          alignItems:alignItems,
+          lineHeight: height,
+          alignItems: alignItems,
         }}
       >
         {props.children}
@@ -72,10 +72,10 @@ IMHeader.propTypes = {
 IMHeader.defaultProps = {
   bgColor: "#FFFFFF",
   color: "#707070",
-  height:"8.33%",
+  height: "8.33%",
   borderBottom: "1px solid #ddd",
-  display:'flex',
-  alignItems:'center',
+  display: 'flex',
+  alignItems: 'center',
 };
 
 export default IMHeader;

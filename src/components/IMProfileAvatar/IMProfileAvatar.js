@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { IMAvatar } from 'im_react_service'
+import { IMAvatar } from '../IMAvatar';
 
 const IMProfileAvatar = ({
     user
