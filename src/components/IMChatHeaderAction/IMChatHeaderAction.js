@@ -3,27 +3,37 @@ import PropTypes from "prop-types";
 import IMIcon from "../IMIcon";
 import IconButton from "@material-ui/core/IconButton";
 
-function IMChatHeaderAction({ color, onClick }) {
+function IMChatHeaderAction({ color, display, justifyContent, alignItems, margin, onClick }) {
   return (
-    <div>
+    <div style={{ display: display, justifyContent: justifyContent, alignItems: alignItems, margin: margin }}>
       <IconButton aria-label="audio" onClick={onClick}>
-        <IMIcon icon="audio" color={color}></IMIcon>
+        <IMIcon icon="audio" size="30" color={color}></IMIcon>
       </IconButton>
       <IconButton aria-label="video" onClick={onClick}>
-        <IMIcon icon="video" color={color}></IMIcon>
+        <IMIcon icon="video" size="30" color={color}></IMIcon>
       </IconButton>
       <IconButton aria-label="Person Add" onClick={onClick}>
-        <IMIcon icon="PersonAdd" color={color}></IMIcon>
+        <IMIcon icon="PersonAdd" size="30" color={color}></IMIcon>
       </IconButton>
     </div>
   );
 }
+
 IMChatHeaderAction.propTypes = {
   color: PropTypes.string,
-  onClick:PropTypes.func,
+  display: PropTypes.string,
+  justifyContent: PropTypes.string,
+  alignItems: PropTypes.string,
+  margin: PropTypes.string,
+  onClick: PropTypes.func,
 };
+
 IMChatHeaderAction.defaultProps = {
-  color: "#304669",
+  color: '#304669',
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  margin: '5px 10px 0 0',
 };
 
 export default IMChatHeaderAction;

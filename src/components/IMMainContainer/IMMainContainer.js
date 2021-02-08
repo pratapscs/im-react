@@ -1,19 +1,16 @@
-import React from "react";
+import React from 'react';
 
 const IMMainContainer = ({
     children
 }) => {
     const style = {
         background: "white",
-        color: "black",
-        width:"100%",
-        height:"100%"
+        color: "black"
     }
-    return(
-        <div style = {style}>
+    return (
+        <div style={style}>
             {children}
         </div>
     );
 }
-
 export default IMMainContainer;

@@ -3,24 +3,27 @@ import PropTypes from 'prop-types';
 import { Avatar } from '@material-ui/core';
 
 
-function IMAvatar({id, type, bgColor, color, width, height, margin, padding, borderRadius, variant, src, alt, onClick, ...props}) {
+function IMAvatar({ id, type, bgColor, color, size, margin, padding, borderRadius, border, variant, src, alt, onClick, ...props }) {
+
   return (
-    <Avatar 
+    <Avatar
       style={{
-        background:bgColor, 
-        color:color, 
-        width:width, 
-        height:height, 
-        margin:margin, 
-        padding:padding,
-        borderRadius:borderRadius
+        padding: padding,
+        background: bgColor,
+        color: color,
+        width: `${size}px`,
+        height: `${size}px`,
+        margin: margin,
+        border: border,
+        borderRadius: borderRadius,
+        fontSize: `${size - (size / 2)}px`,
       }}
       id={id}
       type={type}
       src={src}
       alt={alt}
       onClick={onClick}
-      variant={variant}>                   
+      variant={variant}>
       {props.children}
     </Avatar>
   );
@@ -34,17 +37,17 @@ IMAvatar.propTypes = {
   color: PropTypes.string,
   src: PropTypes.string,
   alt: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
+  size: PropTypes.number,
   margin: PropTypes.string,
   padding: PropTypes.string,
   borderRadius: PropTypes.string,
+  border: PropTypes.string,
   variant: PropTypes.oneOf(['circle', 'circular', 'rounded', 'square'])
 };
 
 IMAvatar.defaultProps = {
   margin: '17px',
-  variant: 'square'
+  variant: 'square',
 };
 
 export default IMAvatar;
