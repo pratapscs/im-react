@@ -31,7 +31,6 @@ IMBody.propTypes = {
 IMBody.defaultProps = {
     bgColor: '#f5f6fa',
     color: '#313c6a',
-    // height:'83.33%'
     height: '91.66%'
 };
 

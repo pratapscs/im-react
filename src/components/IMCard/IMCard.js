@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
-import './im-card.css'
+import './im-card.css';
 
 
 function IMcard({width,height,bgColor,color, padding, margin, ...props }) {

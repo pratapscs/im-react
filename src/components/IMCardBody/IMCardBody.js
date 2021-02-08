@@ -12,14 +12,14 @@ function IMCardBody({ color, ...props }) {
         </Fragment>
     )
 }
+
 IMCardBody.propTypes = {
-
     color: PropTypes.string,
-    
-
 };
+
 IMCardBody.defaultProps = {
     color: '#0000008a',
 };
+
 export default IMCardBody;
 
