@@ -27,10 +27,12 @@ IMIconButton.propTypes = {
     onClick: PropTypes.func,
 
 }
+
 IMIconButton.defaultProps = {
     size: 18,
     color: '#304669',
     type: 'button',
     margin: '1px',
 }
+
 export default IMIconButton;

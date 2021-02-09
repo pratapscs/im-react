@@ -17,6 +17,7 @@ function Layout({ bgColor, color, width, height, fontFamily, ...props }) {
         </div>
     )
 }
+
 Layout.propTypes = {
     bgColor: PropTypes.string,
     color: PropTypes.string,

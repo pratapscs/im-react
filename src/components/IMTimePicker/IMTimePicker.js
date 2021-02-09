@@ -1,7 +1,7 @@
-import 'date-fns';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
+import 'date-fns';
 
 function IMTimePicker({ margin,
     id,

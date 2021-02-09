@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { IMAvatar } from '../IMAvatar';
 import { Link } from "react-router-dom";
 
-
 const IMMenuList = ({
     menuList
 }) => {
