@@ -3,8 +3,7 @@ import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
 import './im-card.css';
 
-
-function IMcard({width,height,bgColor,color, padding, margin, ...props }) {
+function IMCard({width,height,bgColor,color, padding, margin, ...props }) {
     return (
         <Fragment>
             <Card className="im-card" style={{background:bgColor, color:color, width:width, height:height, padding:padding, margin:margin}}>
@@ -13,7 +12,8 @@ function IMcard({width,height,bgColor,color, padding, margin, ...props }) {
         </Fragment>
     )
 }
-IMcard.propTypes = {
+
+IMCard.propTypes = {
     bgColor: PropTypes.string,
     color: PropTypes.string,
     width: PropTypes.string,
@@ -21,11 +21,11 @@ IMcard.propTypes = {
     padding: PropTypes.string,
     margin: PropTypes.string,
 }; 
-IMcard.defaultProps = {
+
+IMCard.defaultProps = {
     bgColor: '#FFF',
     color: '#333',
     width: '100%',
  };
 
-
-export default IMcard
+export default IMCard;
