@@ -13,7 +13,6 @@ function IMCardHeaderAction({bgColor, color, size, margin, padding, icon, iconSi
         </div>
     )
 }
-
 IMCardHeaderAction.propTypes = {
     id: PropTypes.any, 
     bgColor: PropTypes.string,

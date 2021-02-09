@@ -20,7 +20,6 @@ function IMBody({ bgColor, color, width, height, margin, padding, ...props }) {
         </Fragment>
     )
 }
-
 IMBody.propTypes = {
     bgColor: PropTypes.string,
     color: PropTypes.string,
@@ -29,7 +28,6 @@ IMBody.propTypes = {
     margin: PropTypes.string,
     padding: PropTypes.string
 }
-
 IMBody.defaultProps = {
     bgColor: '#f5f6fa',
     color: '#313c6a',

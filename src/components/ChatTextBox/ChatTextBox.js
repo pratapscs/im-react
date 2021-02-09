@@ -6,11 +6,22 @@ import IMIcon from '../IMIcon';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 const ChatTextBox = ({color, onClick}) => {
-    
+    // const [message, setMessage] = useState("")
     return (
         <Fragment>
             <Box style={{position:'relative'}}>
                 <Box style={{display:'flex'}}>
+                    {/* <Textarea width="100%" height="90%" placeholder="Type a new message" /> */}
+                    {/* <textarea style={{width:'99%',}}></textarea> */}
+                    {/* <TextField
+                    id="outlined-textarea"
+                    multiline
+                    fullWidth
+                    variant="outlined"
+                    InputLabelProps={{
+                        shrink: false,
+                    }}
+                    /> */}
                     <TextareaAutosize 
                         style={{
                             width:'97.5%', 
@@ -42,7 +53,6 @@ const ChatTextBox = ({color, onClick}) => {
         </Fragment>
     );
 }
-
 ChatTextBox.propTypes = {
     color: PropTypes.string,
     onClick:PropTypes.func,

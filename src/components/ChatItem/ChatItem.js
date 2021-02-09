@@ -14,7 +14,12 @@ const ChatItem = ({
     fontSize
 }) => {
     return (
-        <div>
+        <div
+        //  style={{
+        //  width: "100%",
+        //  padding: "10px"
+        //  }}
+        >
             <Box
                 display="flex"
                 bgcolor={"transparent"}
