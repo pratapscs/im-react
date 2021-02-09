@@ -14,7 +14,6 @@ function IMHeader({
   left,
   right,
   display,
-  alignItems,
   border,
   borderTop,
   borderRight,
@@ -25,7 +24,7 @@ function IMHeader({
   return (
     <Fragment>
       <div
-        className="im-header"
+        className="im-chat-header"
         style={{
           background: bgColor,
           color: color,
@@ -39,8 +38,6 @@ function IMHeader({
           borderTop: borderTop,
           borderRight: borderRight,
           borderBottom: borderBottom,
-          lineHeight: height,
-          alignItems: alignItems,
         }}
       >
         {props.children}
@@ -66,16 +63,15 @@ IMHeader.propTypes = {
   borderRight: PropTypes.string,
   borderBottom: PropTypes.string,
   borderLeft: PropTypes.string,
-  alignItems: PropTypes.string,
 };
 
 IMHeader.defaultProps = {
   bgColor: "#FFFFFF",
   color: "#707070",
-  height: "8.33%",
+  width: "100%",
+  height: "75px",
+  position: "relative",
   borderBottom: "1px solid #ddd",
-  display: 'flex',
-  alignItems: 'center',
 };
 
 export default IMHeader;

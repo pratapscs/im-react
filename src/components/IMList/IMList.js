@@ -5,7 +5,7 @@ import ListItem from '@material-ui/core/ListItem';
 import IMIcon from '../IMIcon';
 import IMListItemIcon from '../IMListItemIcon';
 import IMListItemText from '../IMListItemText';
-import IMListItemSecondaryAction from '../IMListItemSecondaryAction';
+import IMListItemSecondaryAction from '../IMListItemSecondaryAction'
 import { Divider } from '@material-ui/core';
 
 function IMList({ component, dense, disablePadding, height, width, bgColor, color, onClick, button, itemTitle, itemSubtitle,  fontSize, icon1, icon2, id, ...props }) {

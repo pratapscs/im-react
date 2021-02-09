@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QuestionMark from '../QuestionMark';
+import QuestionMark from '../QuestionMark/QuestionMark';
 import './Tooltip.css';
 
 /** Tooltip component that takes a label for the text to tooltip and children for the content of the tooltip itself. */

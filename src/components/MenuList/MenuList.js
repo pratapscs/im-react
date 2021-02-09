@@ -1,53 +1,53 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { List } from '@material-ui/core';
-import { ListItem } from '@material-ui/core';
-import { ListItemText } from '@material-ui/core';
-import { ListItemAvatar } from '@material-ui/core';
-import IMAvatar from '../IMAvatar';
+import {List} from '@material-ui/core';
+import {ListItem} from '@material-ui/core';
+import {ListItemText} from '@material-ui/core';
+import {ListItemAvatar} from '@material-ui/core';
+import IMAvatar from '../IMAvatar/IMAvatar';
 import './menu-list.css'
-
+ 
 const MenuList = ({
-    id,
-    width,
-    height,
-    bgColor,
-    color,
-    title,
-    titleColor,
-    desc,
-    descColor,
-    time,
-    timeColor,
-    textAlign,
-    margin,
-    padding,
+    id, 
+    width, 
+    height, 
+    bgColor, 
+    color, 
+    title, 
+    titleColor, 
+    desc, 
+    descColor, 
+    time, 
+    timeColor, 
+    textAlign, 
+    margin, 
+    padding, 
     onClick,
-    contact, ...props }) => {
-
+    contact, ...props}) => {
+    
     const returnContact = () => {
         onClick(contact)
     };
-
-    const name = contact.firstName + (contact.lastName ? " " + contact.lastName : '')
+ 
+    const name = contact.firstName + (contact.lastName ? " "+contact.lastName : '')
     const channelName = contact.channelName
-
+ 
     return (
         <Fragment>
             <List className="im-menu-list" component="nav" aria-label="main mailbox folders">
-                <ListItem onClick={returnContact} style={{ background: bgColor, color: color, width: width, height: height }}>
+                <ListItem onClick={returnContact} style={{background:bgColor, color:color, width:width, height:height}}>
                     <ListItemAvatar>
-                        <IMAvatar variant="circular" src={contact.profile} />
+                        <IMAvatar variant="circular" src={contact.profile}/>
                     </ListItemAvatar>
-                    <ListItemText primary={name !== 'undefined' ? name : channelName} secondary={contact.message} style={{ color: titleColor }} />
-                    <ListItemText secondary={contact.sentTime} style={{ textAlign: textAlign, color: timeColor }} />
+                    <ListItemText primary={name !== 'undefined' ? name : channelName} secondary={contact.message} style={{color:titleColor}} />
+                    <ListItemText secondary={contact.sentTime} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>
             </List>
         </Fragment>
     );
 }
-
+ 
 MenuList.propTypes = {
     id: PropTypes.string,
     onClick: PropTypes.func,
@@ -65,11 +65,11 @@ MenuList.propTypes = {
     width: PropTypes.string,
     height: PropTypes.string
 };
-
+ 
 MenuList.defaultProps = {
-    contact: {
+    contact:{
         firstName: 'Default',
-        lastName: '',
+        lastName:'',
         message: 'This is default message',
         profile: '',
         time: '10:10'
@@ -85,5 +85,5 @@ MenuList.defaultProps = {
     timeColor: '#bfccd7',
     onClick: (data) => alert(data)
 };
-
+ 
 export default MenuList;

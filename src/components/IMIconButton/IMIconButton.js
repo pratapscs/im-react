@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from "prop-types";
 import IconButton from '@material-ui/core/IconButton';
-import IMIcon from '../IMIcon';
+import IMIcon from '../IMIcon/IMIcon';
 import './im-icon-button.css';
 
 function IMIconButton({ id, type, icon, bgColor, color, size, ariaLabel, disabled, edge, margin, onClick }) {

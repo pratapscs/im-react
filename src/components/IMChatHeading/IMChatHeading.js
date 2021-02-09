@@ -11,7 +11,6 @@ function IMChatHeading({
   avatarSize,
   avatarSrc,
   avatarBorder,
-  avatarMargin,
   headingText,
   headingColor,
   headingFontSize,
@@ -38,7 +37,6 @@ function IMChatHeading({
         size={avatarSize}
         src={avatarSrc}
         border={avatarBorder}
-        margin={avatarMargin}
       >
         {avatar}
       </IMAvatar>
@@ -55,7 +53,6 @@ function IMChatHeading({
     </div>
   );
 }
-
 IMChatHeading.prototypes = {
   avatar: PropTypes.string,
   avatarVariant: PropTypes.oneOf(["circle", "circular", "rounded", "square"]),
@@ -64,7 +61,6 @@ IMChatHeading.prototypes = {
   avatarSize: PropTypes.number,
   avatarSrc: PropTypes.string,
   avatarBorder: PropTypes.string,
-  avatarMargin: PropTypes.string,
   headingText: PropTypes.string,
   headingColor: PropTypes.string,
   headingFontSize: PropTypes.string,
@@ -75,17 +71,13 @@ IMChatHeading.prototypes = {
   headingPadding: PropTypes.string,
   onClick: PropTypes.func,
 };
-
 IMChatHeading.defaultProps = {
   avatarVariant: "circular",
-  avatarSize: 50,
+  avatarSize: 60,
   headingColor: "#304669",
-  headingMargin: '0',
-  // headingFontSize: "26px",
+  headingFontSize: "28px",
   avatarBg: "#1dc85d",
   avatarColor: "#FFFFFF",
-  avatarMargin: "10px"
 };
-
 
 export default IMChatHeading;

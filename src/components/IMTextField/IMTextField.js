@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField';
-import './im_textfield.css';
+import './im_textfield.css'
 
 function IMTextField({ htmlId, placeholder,
     fullWidth,

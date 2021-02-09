@@ -8,7 +8,7 @@ import GridContainer from '../GridContainer';
 import GridItem from '../GridItem';
 
 
-function InvitationCard({ bgColor, color, titleColor, subTitleColor, title, subTitle, width, height, margin, padding, ...props }) {
+function InvitationCard({bgColor, color, titleColor, subTitleColor, title, subTitle, width, height, margin, padding, ...props}) {
     const onClick = () => {
         alert('Invite Member');
     };
@@ -18,15 +18,15 @@ function InvitationCard({ bgColor, color, titleColor, subTitleColor, title, subT
 
     return (
         <Fragment>
-            <div
-                className="im-invitation-card"
+            <div 
+                className="im-invitation-card" 
                 style={{
-                    background: bgColor,
-                    color: color,
-                    width: width,
-                    height: height,
-                    margin: margin,
-                    padding: padding
+                    background:bgColor, 
+                    color:color,
+                    width:width, 
+                    height:height, 
+                    margin:margin,
+                    padding:padding
                 }}>
                 {props.children}
                 <GridContainer>
@@ -34,8 +34,8 @@ function InvitationCard({ bgColor, color, titleColor, subTitleColor, title, subT
                         <img src={InviteMedia} alt="Invite Member" />
                     </GridItem>
                     <GridItem lg="7">
-                        <p className="im-title" style={{ color: titleColor }}><b>{title}</b></p>
-                        <p className="im-sub-title" style={{ color: subTitleColor }}>{subTitle}</p>
+                        <p className="im-title" style={{color:titleColor}}><b>{title}</b></p>
+                        <p className="im-sub-title" style={{color:subTitleColor}}>{subTitle}</p>
                     </GridItem>
                     <GridItem lg="3" textAlign="center">
                         <IMIcon icon="CloseIcon" size="25" onClose={() => onClose()} />

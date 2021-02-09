@@ -4,7 +4,7 @@ import Label from '../Label';
 import styled from 'styled-components';
 
 /** Text input with integrated label to enforce consistency in layout, error display, label placement, and required field marker. */
-function TextInput({ htmlId, name, label, type = "text", required = false, onChange, placeholder, value, error, children, ...props }) {
+function TextInput({htmlId, name, label, type = "text", required = false, onChange, placeholder, value, error, children, ...props}) {
   const Error = styled.div`
     color: red;
   `
@@ -28,8 +28,8 @@ function TextInput({ htmlId, name, label, type = "text", required = false, onCha
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        {...props} />
-      {children}
+        {...props}/>
+        {children}
       {error && <Error>{error}</Error>}
     </Fieldset>
   );
