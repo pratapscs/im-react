@@ -1,6 +1,6 @@
 {
   "name": "zk-minervaiot-im",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "main": "./lib/index.js",
   "engines": {
     "node": ">=4.0.0"

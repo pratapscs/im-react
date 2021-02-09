@@ -18,10 +18,12 @@ function IMChatHeaderAction({ color, onClick }) {
     </div>
   );
 }
+
 IMChatHeaderAction.propTypes = {
   color: PropTypes.string,
   onClick:PropTypes.func,
 };
+
 IMChatHeaderAction.defaultProps = {
   color: "#304669",
 };

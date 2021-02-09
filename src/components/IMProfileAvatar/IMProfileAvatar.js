@@ -6,7 +6,7 @@ const IMProfileAvatar = ({
 }) => {
     return(
         <Fragment>
-            <IMAvatar variant="circular" src = {user ? user.profile : ''}></IMAvatar>
+            <IMAvatar margin="17px 17px 64px 17px" variant="circular" src = {user ? user.profile : ''}></IMAvatar>
         </Fragment>
     );
 }

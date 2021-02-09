@@ -18,7 +18,9 @@ const RightMainPage = ({
     left, ...props}) => {
     return (
         <Fragment>
-            <div style={{
+            <div 
+                className="right-main-page"
+                style={{
                     background:bgColor, 
                     color:color, 
                     width:width, 
@@ -57,10 +59,11 @@ RightMainPage.propTypes = {
 };
 
 RightMainPage.defaultProps = {
-    bgColor: '#fff',
+    bgColor: '#FFFFFF',
     color: '#000000',
     width: '100%',
     height: '100vh',
+    border: '1px solid #ddd',
 };
 
 export default RightMainPage;

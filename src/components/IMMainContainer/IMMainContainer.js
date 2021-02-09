@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const IMMainContainer = ({
     children
 }) => {
     const style = {
         background: "white",
-        color: "black",
-        width:"100%",
-        height:"100%"
+        color: "black"
     }
     return(
         <div style = {style}>
@@ -15,5 +13,4 @@ const IMMainContainer = ({
         </div>
     );
 }
-
 export default IMMainContainer;
