@@ -24,10 +24,8 @@ IMCardHeaderAction.propTypes = {
     iconSize:PropTypes.number,
     onClick: PropTypes.func,
 }; 
-
 IMCardHeaderAction.defaultProps = {
    iconSize:20,
 };
-
 export default IMCardHeaderAction;
 

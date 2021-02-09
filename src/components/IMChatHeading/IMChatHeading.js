@@ -27,6 +27,7 @@ function IMChatHeading({
       onClick={onClick}
       style={{
         display: "flex",
+        // justifyContent: "center",
         alignItems: "center",
       }}
     >
@@ -80,6 +81,7 @@ IMChatHeading.defaultProps = {
   avatarSize: 50,
   headingColor: "#304669",
   headingMargin: '0',
+  // headingFontSize: "26px",
   avatarBg: "#1dc85d",
   avatarColor: "#FFFFFF",
   avatarMargin: "10px"
