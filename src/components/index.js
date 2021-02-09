@@ -9,6 +9,7 @@ export {default as Grid} from './Grid';
 export {default as GridContainer } from './GridContainer';
 export {default as GridItem} from './GridItem';
 export {default as IMAvatar} from './IMAvatar';
+export {default as IMBody} from './IMBody';
 export {default as IMButton} from './IMButton';
 export {default as IMCard} from './IMCard';
 export {default as IMCardBody} from './IMCardBody';
