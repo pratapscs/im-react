@@ -4,5 +4,9 @@
     width: 100%;
 }
 .form-control div{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem ;
+}
+
+.form-control .MuiSelect-select{
+    margin-bottom: 0rem;
 }

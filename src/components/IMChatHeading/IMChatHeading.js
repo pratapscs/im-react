@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IMAvatar from "../IMAvatar";
-import IMHeading from "../IMHeading";
+import IMAvatar from "../IMAvatar/IMAvatar";
+import IMHeading from "../IMHeading/IMHeading";
 
 function IMChatHeading({
   avatar,
@@ -27,6 +27,7 @@ function IMChatHeading({
       onClick={onClick}
       style={{
         display: "flex",
+        // justifyContent: "center",
         alignItems: "center",
       }}
     >
@@ -73,15 +74,15 @@ IMChatHeading.prototypes = {
   headingPadding: PropTypes.string,
   onClick: PropTypes.func,
 };
-
 IMChatHeading.defaultProps = {
   avatarVariant: "circular",
-  avatarSize: 50,
+  avatarSize:50,
   headingColor: "#304669",
   headingMargin: '0',
+  // headingFontSize: "26px",
   avatarBg: "#1dc85d",
   avatarColor: "#FFFFFF",
-  avatarMargin: "10px"
+  avatarMargin : "10px"
 };
 
 export default IMChatHeading;

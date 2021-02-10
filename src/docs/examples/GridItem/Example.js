@@ -1,10 +1,15 @@
-import React from 'react';
-import GridItem from 'im-react/GridItem';
+import React from "react";
+import GridContainer from "im-react/GridContainer";
+import GridItem from "im-react/GridItem";
 
 export default function GridItemExample() {
   return (
-      <GridItem>
-          <h1>Layout Example</h1>
-      </GridItem>
+    <div>
+      <GridContainer>
+        <GridItem lg="4">GridItem lg 4</GridItem>
+        <GridItem lg="4">GridItem lg 4</GridItem>
+        <GridItem lg="4">GridItem lg 4</GridItem>
+      </GridContainer>
+    </div>
   );
 }

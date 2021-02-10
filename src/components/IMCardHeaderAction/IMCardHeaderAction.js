@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import IMIcon from '../IMIcon';
+import IMIconButton from "../IMIconButton/IMIconButton";
 
-function IMCardHeaderAction({bgColor, color, size, margin, padding, icon, iconSize, id, onClick, ...props}) {
+
+
+function IMCardHeaderAction({bgColor, color, size, margin, padding, icon, ariaLabel, id, onClick, ...props}) {
     return (
-        <div>
-          <IconButton onClick={onClick} style={{background:bgColor, color:color, width:`${size}px`,  height:`${size}px`, padding:padding, margin:margin}}>
-            <IMIcon color={color} icon={icon} size={iconSize} />
-          </IconButton>
-            
+        <div style={{margin:margin, padding:padding,}}>
+          <IMIconButton id={id} icon={icon} color={color} bgColor={bgColor} size={size} ariaLabel={ariaLabel}  onClick={onClick} />         
         </div>
     )
 }
@@ -20,12 +18,12 @@ IMCardHeaderAction.propTypes = {
     size: PropTypes.number,    
     padding: PropTypes.string,
     margin: PropTypes.string,
-    icon: PropTypes.string,
-    iconSize:PropTypes.number,
+    icon: PropTypes.string,   
+    ariaLabel:PropTypes.string,
     onClick: PropTypes.func,
 }; 
 IMCardHeaderAction.defaultProps = {
-   iconSize:20,
+  
 };
 export default IMCardHeaderAction;
 

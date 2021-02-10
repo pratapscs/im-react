@@ -6,7 +6,7 @@ import {ListItemText} from '@material-ui/core';
 import {ListItemAvatar} from '@material-ui/core';
 import IMAvatar from '../IMAvatar/IMAvatar';
 import './menu-list.css'
- 
+
 const MenuList = ({
     id, 
     width, 
@@ -23,34 +23,29 @@ const MenuList = ({
     margin, 
     padding, 
     onClick,
-    contact, ...props}) => {
-    
-    const returnContact = () => {
-        onClick(contact)
-    };
- 
-    const name = contact.firstName + (contact.lastName ? " "+contact.lastName : '')
-    const channelName = contact.channelName
- 
+    selected,
+    button,  ...props}) => {
     return (
         <Fragment>
             <List className="im-menu-list" component="nav" aria-label="main mailbox folders">
-                <ListItem onClick={returnContact} style={{background:bgColor, color:color, width:width, height:height}}>
+                <ListItem selected={selected} button={button}
+                    onClick={onClick}style={{background:bgColor, color:color, width:width, height:height}}>
                     <ListItemAvatar>
-                        <IMAvatar variant="circular" src={contact.profile}/>
+                        <IMAvatar variant="circular" />
                     </ListItemAvatar>
-                    <ListItemText primary={name !== 'undefined' ? name : channelName} secondary={contact.message} style={{color:titleColor}} />
-                    <ListItemText secondary={contact.sentTime} style={{textAlign:textAlign, color:timeColor}} />
+                    <ListItemText primary={title} secondary={desc} style={{color:titleColor}} />
+                    <ListItemText secondary={time} style={{textAlign:textAlign, color:timeColor}} />
                     {props.children}
                 </ListItem>
             </List>
         </Fragment>
     );
 }
- 
+
 MenuList.propTypes = {
     id: PropTypes.string,
     onClick: PropTypes.func,
+    selected: PropTypes.func,
     bgColor: PropTypes.string,
     color: PropTypes.string,
     title: PropTypes.string,
@@ -63,18 +58,12 @@ MenuList.propTypes = {
     margin: PropTypes.string,
     padding: PropTypes.string,
     width: PropTypes.string,
-    height: PropTypes.string
+    height: PropTypes.string,
+    button: PropTypes.string,
 };
- 
+
 MenuList.defaultProps = {
-    contact:{
-        firstName: 'Default',
-        lastName:'',
-        message: 'This is default message',
-        profile: '',
-        time: '10:10'
-    },
-    bgColor: '#f5f7fa',
+    
     color: '#fff',
     titleColor: '#304669',
     title: 'Miracy',
@@ -83,7 +72,9 @@ MenuList.defaultProps = {
     time: '15:35',
     textAlign: 'right',
     timeColor: '#bfccd7',
-    onClick: (data) => alert(data)
+    button: 'button',
+    // bgColor:'#FFFFFF'
+
 };
- 
+
 export default MenuList;

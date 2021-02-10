@@ -1,0 +1,7 @@
+.stepper-text {
+    border-radius: 22px;
+    border:1px solid rgb(48 70 105 / 55%);
+    padding: 6px;
+    color: rgb(48, 70, 105);
+    font-size: 12px;
+}

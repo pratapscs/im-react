@@ -2,27 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Avatar } from '@material-ui/core';
 
-function IMAvatar({ id, type, bgColor, color, size, margin, padding, borderRadius, border, variant, src, alt, onClick, ...props }) {
+function IMAvatar({id, type, bgColor, color, size, margin, padding, borderRadius, border, variant, src, alt, onClick, ...props}) {
 
   return (
-    <Avatar
+    <Avatar 
       style={{
-        padding: padding,
-        background: bgColor,
-        color: color,
-        width: `${size}px`,
-        height: `${size}px`,
-        margin: margin,
-        border: border,
-        borderRadius: borderRadius,
-        fontSize: `${size - (size / 2)}px`,
+        padding:padding,
+        background:bgColor, 
+        color:color, 
+        width:`${size}px`, 
+        height:`${size}px`, 
+        margin:margin,
+        border:border,     
+        borderRadius:borderRadius,
+        fontSize:`${size - (size/2)}px`,
       }}
       id={id}
       type={type}
       src={src}
       alt={alt}
       onClick={onClick}
-      variant={variant}>
+      variant={variant}>                   
       {props.children}
     </Avatar>
   );
@@ -41,7 +41,7 @@ IMAvatar.propTypes = {
   padding: PropTypes.string,
   borderRadius: PropTypes.string,
   border: PropTypes.string,
-  variant: PropTypes.oneOf(['circle', 'circular', 'rounded', 'square'])
+  variant: PropTypes.oneOf(['circle', 'circular', 'rounded', 'square']),
 };
 
 IMAvatar.defaultProps = {
@@ -50,3 +50,5 @@ IMAvatar.defaultProps = {
 };
 
 export default IMAvatar;
+
+

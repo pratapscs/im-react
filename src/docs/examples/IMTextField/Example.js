@@ -4,7 +4,7 @@ import IMTextField from 'im-react/IMTextField';
 function Example() {
     return (
         <Fragment>
-            <IMTextField></IMTextField>
+            <IMTextField type="text"></IMTextField>
         </Fragment>
     )
 }

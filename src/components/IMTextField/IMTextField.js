@@ -22,11 +22,12 @@ function IMTextField({ htmlId, placeholder,
     required,
     size,
     value,
+    select,
     ...props }) {
     return (
         <Fragment>
+
             <form noValidate autoComplete="off">
-                {/* <FormLabel>Title</FormLabel> */}
                 <TextField
                     id={htmlId}
                     placeholder={placeholder}
@@ -51,6 +52,7 @@ function IMTextField({ htmlId, placeholder,
                     required={required}
                     size={size}
                     value={value}
+                    select={select}
                 >
                     {props.children}
                 </TextField>
@@ -63,7 +65,6 @@ IMTextField.propTypes = {
     htmlId: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     fullWidth: PropTypes.bool,
-    type: PropTypes.string,
     margin: PropTypes.string,
     variant: PropTypes.string,
     autoComplete: PropTypes.bool,
@@ -79,8 +80,10 @@ IMTextField.propTypes = {
     required: PropTypes.string,
     size: PropTypes.string,
     value: PropTypes.any,
-
+    select: PropTypes.string,
+    type: PropTypes.oneOf(['text', 'email', 'number', 'password', 'time', 'date', 'radio', 'checkbox']),
 }
+
 IMTextField.defaultProps = {
     placeholder: 'Enter Title',
     fullWidth: 'fullWidth',

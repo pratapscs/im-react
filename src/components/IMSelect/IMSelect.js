@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
+import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import './im_select.css'
 
@@ -19,6 +20,7 @@ function IMSelect({ id,
     fullWidth,
     margin,
     select,
+    type,
     ...props }) {
 
     const [attendees, setAttendees] = React.useState('1');
@@ -29,8 +31,7 @@ function IMSelect({ id,
 
     return (
         <Fragment>
-              <form noValidate autoComplete="off">
-            {/* <FormLabel>Select Time Zone</FormLabel> */}
+            <form noValidate autoComplete="off">
                 <TextField
                     id="List of attendees"
                     value={attendees}
@@ -49,12 +50,15 @@ function IMSelect({ id,
                     labelWidth={labelWidth}
                     className="form-control"
                     select={select}
+                    type={type}
                 >
                     {props.children}
-                   
-                </TextField>  
-                </form>
-        </Fragment>
+                    <MenuItem value={10}>London</MenuItem>
+                    <MenuItem value={20}>USA</MenuItem>
+                    <MenuItem value={30}>America</MenuItem>
+                </TextField>
+            </form>
+        </Fragment >
     )
 }
 
@@ -75,15 +79,16 @@ IMSelect.propTypes = {
     fullWidth: PropTypes.string,
     margin: PropTypes.string,
     select: PropTypes.string,
+    type: PropTypes.string,
 
 }
 IMSelect.defaultProps = {
 
     value: 'user1',
-    fullWidth:'fullWidth',
+    fullWidth: 'fullWidth',
     margin: 'dense',
     variant: 'outlined',
-    select:'select',
+    select: 'select',
 };
 export default IMSelect;
 

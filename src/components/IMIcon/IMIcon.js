@@ -4,7 +4,7 @@ import iconPath from "../IMIcon/IconLib";
 
 const defaultStyles = { display: "inline-block", verticalAlign: "middle", padding:"5px"};
 
-function IMIcon  ({ size, color, icon, className, style, viewBox })  {
+function IMIcon  ({size, color, icon, className, style, viewBox})  {
   const styles = { ...defaultStyles, ...style };
   
   return (

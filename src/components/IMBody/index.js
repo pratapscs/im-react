@@ -1,1 +1,1 @@
-export { default } from './IMBody';
+export {default} from './IMBody';

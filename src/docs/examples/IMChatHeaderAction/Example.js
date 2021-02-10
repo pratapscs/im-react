@@ -1,10 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import IMChatHeaderAction from 'im-react/IMChatHeaderAction';
 
-export default function ExampleIMChatHeaderAction() {
-    return (
-        <Fragment>
-            <IMChatHeaderAction />
-        </Fragment>
-    )
+/** IM Chat Header Action example */
+
+function Example() {
+  return (
+    <div>
+     <IMChatHeaderAction justifyContent="flex-start"  />
+    </div>
+  );
 }
+export default Example;
+

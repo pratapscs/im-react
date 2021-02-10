@@ -1,4 +1,8 @@
 .im-menu-list {
     padding: 0 !important;
     border-bottom: 1px solid #bdbdbd;
+    background-color: #fff;
+}
+.im-menu-list .MuiListItem-root.Mui-selected {
+    background-color: rgb(245,247,250);
 }

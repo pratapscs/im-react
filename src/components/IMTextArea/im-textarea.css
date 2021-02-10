@@ -1,0 +1,12 @@
+
+.message-textarea{
+    margin: 1rem;
+    /* width: -moz-available;  */
+    padding-right: 100px;
+    padding: 1rem;
+    outline:none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-right: 200px;
+    resize: none;
+}

@@ -1,7 +1,7 @@
-import 'date-fns';
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
+import 'date-fns';
 
 function IMDatePicker({ margin,
     id,
@@ -20,6 +20,13 @@ function IMDatePicker({ margin,
     defaultValue,
     ...props }) {
 
+    /*
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+
+    const handleDateChange = (date) => {
+        setSelectedDate(date);
+    };
+    */
 
     return (
         <Fragment>
@@ -41,7 +48,7 @@ function IMDatePicker({ margin,
                 </TextField>
             </form>
         </Fragment>
-    
+
     );
 }
 IMDatePicker.defaultProps = {
@@ -51,7 +58,7 @@ IMDatePicker.defaultProps = {
     margin: PropTypes.string,
     variant: PropTypes.string,
     placeholder: PropTypes.string,
-    defaultValue: PropTypes.string 
+    defaultValue: PropTypes.string,
 };
 IMDatePicker.defaultProps = {
     id: 'id',

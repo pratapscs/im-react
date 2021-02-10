@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Box from "@material-ui/core/Box";
 import { Avatar } from "@material-ui/core";
 import PropTypes from "prop-types";
@@ -8,37 +8,39 @@ const ChatItem = ({
     message,
     float,
     color,
+    height,
+    width,
     bgColor,
     fontFamily,
     fontWeight,
     fontSize
 }) => {
     return (
-        <div
-        //  style={{
-        //  width: "100%",
-        //  padding: "10px"
-        //  }}
-        >
+        <Fragment>
             <Box
                 display="flex"
                 bgcolor={"transparent"}
-                alignItems="center"
                 fontFamily={fontFamily}
                 fontWeight={fontWeight}
                 fontSize={fontSize}
+                height={height}
+                width={width}
                 color={color}
             >
                 <Box
                     display="flex"
-                    alignItems="center"
-                    flexGrow={1}
-                    flexDirection = "row"
+                    flexDirection="row"
                 >
                     <Box p={1}>{avatar}</Box>
+                </Box>
+                <Box
+                    display="flex"
+                    alignItems="center"
+                    flexDirection="row"
+                >
                     <Box
                         p={1}
-                        bgcolor= {float === "right" ? "#e3f4e9" : "#f0f8ff"}
+                        bgcolor={float === "right" ? "#e3f4e9" : "#f0f8ff"}
                         border="1px solid white"
                         borderRadius="10px"
                     >
@@ -46,23 +48,21 @@ const ChatItem = ({
                     </Box>
                 </Box>
             </Box>
-        </div>
+        </Fragment>
     );
 };
 
 ChatItem.defaultProps = {
-    bgColor: "red",
-    height: "75px",
-    avatar: <Avatar>V</Avatar>,
-    message: "hi Vinay, welcome to zkteco",
+    bgColor: "#F0F8FF",
+    height: "auto",
+    width: "auto",
+    avatar: <Avatar>A</Avatar>,
+    message: "Hello Mr. Atif, Welcome to ZKTeco Biometrics India Pvt Ltd.",
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
     fontWeight: "small",
-    color: "#000",
-    textColor: "#304669",
-    name: "pratap@zkteco.in",
-    datetime: "01-02-2020"
+    float: "left",
+    color: "#000"
 };
-
 
 ChatItem.propTypes = {
     avatar: PropTypes.element.isRequired,
@@ -73,9 +73,8 @@ ChatItem.propTypes = {
     fontSize: PropTypes.string,
     float: PropTypes.string,
     color: PropTypes.string,
-    textColor: PropTypes.string,
-    name: PropTypes.string,
-    datetime: PropTypes.string
+    height: PropTypes.string,
+    width: PropTypes.string,
 };
 
 export default ChatItem;
