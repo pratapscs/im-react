@@ -4,10 +4,10 @@ import IconButton from '@material-ui/core/IconButton';
 import IMIcon from '../IMIcon/IMIcon';
 import './im-icon-button.css';
 
-function IMIconButton({ id, type, icon, bgColor, color, size, ariaLabel, disabled, edge, margin, onClick }) {
+function IMIconButton({ id, type, icon, bgColor, color, size, ariaLabel, disabled, edge, margin, href, onClick }) {
     return (
         <Fragment>
-            <IconButton className="im-icon-button" type={type} disabled={disabled} aria-label={ariaLabel} edge={edge} id={id} onClick={onClick} style={{ backgroundColor: bgColor, color: color, margin: margin, padding: `${size / 2}px` }}>
+            <IconButton href={href} className="im-icon-button" type={type} disabled={disabled} aria-label={ariaLabel} edge={edge} id={id} onClick={onClick} style={{ backgroundColor: bgColor, color: color, margin: margin, padding: `${size / 2}px` }}>
                 <IMIcon icon={icon} size={Number(`${size}`) + 15} color={color} />
             </IconButton>
         </Fragment>
@@ -24,6 +24,7 @@ IMIconButton.propTypes = {
     disabled: PropTypes.bool,
     edge: PropTypes.oneOf(['start', 'end', 'false']),
     margin: PropTypes.string,
+    href: PropTypes.string,
     onClick: PropTypes.func,
 
 }
