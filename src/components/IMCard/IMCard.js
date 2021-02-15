@@ -13,6 +13,7 @@ function IMcard({width,height,bgColor,color, padding, margin, ...props }) {
         </Fragment>
     )
 }
+
 IMcard.propTypes = {
     bgColor: PropTypes.string,
     color: PropTypes.string,

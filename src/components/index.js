@@ -10,6 +10,7 @@ export { default as EyeIcon } from './EyeIcon';
 export { default as Grid } from './Grid';
 export { default as GridContainer } from './GridContainer';
 export { default as GridItem } from './GridItem';
+export { default as IMAppBar } from './IMAppBar';
 export { default as IMAvatar } from './IMAvatar';
 export { default as IMBadges } from './IMBadges';
 export { default as IMBody } from './IMBody';
